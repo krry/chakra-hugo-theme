@@ -1,6 +1,6 @@
 name = "Chakra"
 license = "GNU GPL v3"
-licenselink = "https://github.com/krry/hugo-chakra-theme/blob/master/LICENSE"
+licenselink = "https://github.com/krry/chakra-hugo-theme/blob/master/LICENSE"
 description = "a clean, energetic theme for Hugo"
 homepage = "http://atmanaut.me/"
 tags = []
