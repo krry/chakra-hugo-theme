@@ -8,6 +8,9 @@
     <!-- mobile responsive --> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- meta content -->
+    <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+
     {{ if .IsHome -}}
     <title>{{ .Site.Title}}</title>
     {{- else -}}
