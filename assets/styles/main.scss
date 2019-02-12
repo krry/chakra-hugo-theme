@@ -1,0 +1,27 @@
+$font-size: 16px;
+$color-bg: #e5e4e2;
+$color-text: #242321;
+$font-family: 'IBM Plex Sans', sans-serif;
+$color-link: #239aa7;
+
+// add param values to template variables
+// can't bring params into partials yet, so here instead
+// TODO: add page params here from front matter
+
+//$colorBg: {{/* .Site.Params.bgColor | default $colorBg */}};
+//$color_text: {{/* .Site.Data.color.primaryColor | default
+//$color_text */}} !default;
+
+// import partial stylesheets, using variables from params
+@import "variables";
+// @import "mixins";
+// @import "reset";
+@import "base";
+// @import "tables";
+// @import "utilities";
+// @import "animations";
+// @import "buttons";
+// @import "forms";
+// @import "navigation";
+// @import "footer";
+// @import "lists";

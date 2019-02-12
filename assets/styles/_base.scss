@@ -1,0 +1,46 @@
+html {
+  font-size: $font-size;
+  box-sizing: border-box;
+  font-family: $font-family;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $color-text;
+  background: $color-bg;
+  margin: 0;
+  padding: 2.5rem;
+  border-width: 2.5rem;
+  border-color: inherit;
+  border-style: inset;
+  font-size: 1.5em;
+  border-color: chartreuse;
+  border-left-color: $color-link;
+  border-right-color: indianred;
+  position: relative;
+}
+
+header ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header li {
+  display: inline-block;
+}
+
+header nav a {
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  color: $color-link;
+}
+

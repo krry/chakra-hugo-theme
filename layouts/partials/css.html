@@ -1,0 +1,19 @@
+<!-- Style compiler -->
+
+{{ $inServerMode := .Site.IsServer }}
+{{ $sass         := resources.Get "styles/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . }}
+{{ $sassIncludes := (slice "assets/dependencies/" "assets/styles/") }}
+{{ $cssTarget    := "css/styles.css" }}
+{{ $cssOpts      := cond (.Site.IsServer) (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes) (dict "targetPath" $cssTarget "includePaths" $sassIncludes "outputStyle" "compressed") }}
+
+{{ if .Site.IsServer }}
+
+{{ $css := $sass | toCSS $cssOpts }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" media="screen">
+
+{{ else }}
+
+{{ $css := $sass | toCSS $cssOpts | resources.PostCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink | absURL }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+
+{{ end }}
