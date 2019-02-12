@@ -1,0 +1,14 @@
+a:link {
+  color: $color-link;
+  &:hover {
+    color: $color-link-hover;
+  }
+  &:visited {
+    color: $color-link-visited;
+  }
+  &:active {
+    font-weight: bolder;
+  }
+}
+
+

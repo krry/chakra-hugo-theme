@@ -1,0 +1,40 @@
+html, body {
+  height: 100vh;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+}
+
+.lane {
+  overflow-y: scroll;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+aside.lane {
+  order: 2;
+  background: $color-purple;
+  color: $color-white;
+  width: 12em;
+  text-align: center;
+}
+.right.lane {
+  order: 2;
+}
+.left.lane {
+  order: -1;
+}
+
+.anchor {
+  flex-shrink: 0;
+}
+
+main.lane {
+  flex: 1;
+  order: 1;
+  background: $color-white;
+  color: $color-black;
+}

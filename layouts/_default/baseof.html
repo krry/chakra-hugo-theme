@@ -1,10 +1,12 @@
-{{- partial "head.html" . -}}
+{{ partial "head.html" . }}
   <body>
-  {{- partial "header.html" . -}}
-    <main id="content" class="content" aria-role="main">
+    <aside class="right lane">
+      {{ partial "header.html" . }}
+      {{ partial "footer.html" . }}
+    </aside>
+    <main id="content" class="content left lane" aria-role="main">
     {{- block "main" . }}{{- end }}
     </main>
-  {{- partial "footer.html" . -}}
   {{ template "_internal/google_analytics_async.html" . }}
   </body>
 </html>

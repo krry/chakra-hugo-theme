@@ -1,10 +1,10 @@
 <!-- Style compiler -->
-
 {{ $inServerMode := .Site.IsServer }}
-{{ $sass         := resources.Get "styles/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . }}
-{{ $sassIncludes := (slice "assets/dependencies/" "assets/styles/") }}
+{{ $sass         := resources.Get "styles/main.scss" | resources.ExecuteAsTemplate "temp.main.scss" . }}
+{{ $sassIncludes := (slice "assets/styles/") }}
 {{ $cssTarget    := "css/styles.css" }}
 {{ $cssOpts      := cond (.Site.IsServer) (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes) (dict "targetPath" $cssTarget "includePaths" $sassIncludes "outputStyle" "compressed") }}
+
 
 {{ if .Site.IsServer }}
 
