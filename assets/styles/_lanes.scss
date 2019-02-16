@@ -14,21 +14,15 @@ body {
   flex-direction: column;
 }
 
-aside.lane {
-  order: 2;
-  background: $color-purple;
-  color: $color-white;
-  width: 12em;
-  text-align: center;
-}
-.right.lane {
-  order: 2;
-}
 .left.lane {
   order: -1;
 }
 
-.anchor {
+.right.lane {
+  order: 2;
+}
+
+.brand {
   flex-shrink: 0;
 }
 
@@ -37,4 +31,14 @@ main.lane {
   order: 1;
   background: $color-white;
   color: $color-black;
+  padding: 2rem 4rem 4rem;
+}
+
+aside.lane {
+  order: 2;
+  background-color: $color-purple;
+  color: $color-white;
+  width: 12em;
+  text-align: center;
+  justify-content: space-evenly;
 }
