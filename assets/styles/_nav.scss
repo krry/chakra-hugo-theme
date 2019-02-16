@@ -13,11 +13,11 @@ header li {
 header nav a {
   display: block;
   text-decoration: none;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  background-color: $color-link;
-  color: $color-white;
-  padding: 0.25em 0.75em;
+  color: white;
 }
-
+header nav li {
+  display: block;
+  margin: 0.5em auto;
+  padding: 0.25em;
+}
 

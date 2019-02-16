@@ -1,6 +1,6 @@
 <!-- Style compiler -->
 {{ $inServerMode := .Site.IsServer }}
-{{ $sass         := resources.Get "styles/main.scss" | resources.ExecuteAsTemplate "temp.main.scss" . }}
+{{ $sass         := resources.Get "styles/main.scss" | resources.ExecuteAsTemplate "styles/main.scss" . }}
 {{ $sassIncludes := (slice "assets/styles/") }}
 {{ $cssTarget    := "css/styles.css" }}
 {{ $cssOpts      := cond (.Site.IsServer) (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes) (dict "targetPath" $cssTarget "includePaths" $sassIncludes "outputStyle" "compressed") }}
@@ -17,3 +17,5 @@
 <link rel="stylesheet" href="{{ $css.RelPermalink | absURL }}" integrity="{{ $css.Data.Integrity }}" media="screen">
 
 {{ end }}
+
+<link rel="stylesheet" media="screen" href="css/app.css">
