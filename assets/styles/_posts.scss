@@ -1,0 +1,33 @@
+.post-date {
+  color: $color-gray;
+  font-size: 0.75em;
+  display: block;
+}
+
+.post-title {
+  margin: 0;
+}
+
+a.read-more-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  border-radius: $base-line-height;
+  padding: 2em;
+  transition: all ease-out 500ms;
+  &:hover {
+    color: hsla(237, 70%, 30%, 1);
+    background: hsla(237, 70%, 80%, 0.5);
+  }
+  &:visited {
+    opacity: 0.8;
+  }
+}
+
+.content .post {
+  padding: 0 4em;
+}
+
+.content .posts .post {
+  padding: 0 2em;
+}

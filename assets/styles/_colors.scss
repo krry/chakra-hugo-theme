@@ -1,0 +1,57 @@
+
+// organic color palette
+// minerals
+$cinnabar-red: #E34234;
+$cadmium-yellow: #FFF600;
+$cadmium-orange: #ED872D;
+$cadmium-red: #E30022;
+$cadmium-green: #006B3C;
+$sienna: #882D17;
+$cobalt-blue: #0047AB;
+$lapis-blue: #26619C;
+$malachite-green: #0BDA51;
+$jade-green: #00A86B;
+$onyx-black: #0F0F0F;
+$peridot-yellow: #E6E200;
+$platinum-grey: #E5E4E2;
+$titanium-grey: rgb(94, 93, 91);
+$viridian-green: #40826D;
+$verdigris-green: #43B3AE;
+$amethyst: rgb(50, 6, 84);
+
+// dyes;
+$indigo: #00416A;
+$magenta: #CA1F7B;
+$ochre-yellow: #CC7722;
+$mustard-yellow: #FFDB58;
+$ecru-tan: #C2B280;
+
+// flowers and plants;
+$raspberry-red: #E30B5C;
+$periwinkle-blue: #CCCCFF;
+
+$scarlet-red: #FF2400;
+$robin-egg-blue: #00CCCC;
+$cadet-blue: #536878;
+$chartreuse-yellow: #DFFF00;
+$citrine-green: #E4D00A;
+$capri-blue: #00BFFF;
+$kelly-green: #4CBB17;
+
+// color wheel;
+$orange: #FF7F00;
+$azure: #007FFF;
+
+// default color palette variables
+$color-red: $cinnabar-red !default;
+$color-white: $platinum-grey !default;
+$color-gray: $titanium-grey !default;
+$color-teal: $robin-egg-blue !default;
+$color-blue: $lapis-blue !default;
+$color-green: $kelly-green !default;
+$color-yellow: $ecru-tan !default;
+$color-indigo: $indigo !default;
+$color-purple: $amethyst !default;
+$color-brown: $sienna !default;
+$color-orange: $cadmium-orange !default;
+$color-black: $onyx-black !default;

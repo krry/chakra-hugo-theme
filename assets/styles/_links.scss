@@ -1,13 +1,11 @@
-a:link {
-  color: $color-link;
+.shellink a {
+  text-decoration: none;
+  color: inherit;
+  // display: block;
   &:hover {
-    color: $color-link-hover;
+    color: inherit;
   }
   &:visited {
-    color: $color-link-visited;
-  }
-  &:active {
-    font-weight: bolder;
+    color: inherit;
   }
 }
-

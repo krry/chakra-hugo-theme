@@ -1,23 +1,9 @@
-header {
-}
-header ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-header li {
-  display: inline-block;
-}
-
 header nav a {
-  display: block;
-  text-decoration: none;
-  color: white;
+  padding: 0.25em;
 }
+
 header nav li {
   display: block;
   margin: 0.5em auto;
-  padding: 0.25em;
 }
 
