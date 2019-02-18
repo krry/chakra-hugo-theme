@@ -1,8 +1,9 @@
-<header class="">
+<header>
   <div class="brand shellink">
     <a class="" href="{{ .Site.Home.RelPermalink }}">
       <div class="logo"></div>
-      <h1 class="site-title">{{ .Site.Title }}</h1>
+      <h1 class="site-title">{{ $.Site.Title }}</h1>
+      <h3>{{ $.Site.Params.description }}</h3>
     </a>
   </div>
   <nav>

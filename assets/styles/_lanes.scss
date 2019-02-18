@@ -8,15 +8,12 @@ body {
 }
 
 .lane {
+  position: relative;
+  min-height: 100vh;
   overflow-y: scroll;
   display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   flex: 1;
-}
-
-.left.lane {
-  order: -1;
+  flex-direction: column;
 }
 
 .right.lane {
@@ -28,18 +25,15 @@ body {
 }
 
 main.lane {
-  flex: 2;
-  order: 1;
-  background: $color-white;
+  flex: 3;
   color: $color-black;
-  padding: 3em 0;
   border-radius: 0 $base-line-height $base-line-height 0;
 }
 
 aside.lane {
-  order: 2;
   background-color: transparent;
   color: $color-white;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 2rem;
 }

@@ -1,0 +1,7 @@
+<ul id="all-tags" class="tag-cloud list-tags list-inline">
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+  {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+  <li class="tag-term"><a href="{{ .Permalink }}">{{ $name }}</a></li>
+  {{ end }}
+  {{ end }}
+</ul>

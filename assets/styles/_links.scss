@@ -1,11 +1,12 @@
 .shellink a {
   text-decoration: none;
-  color: inherit;
-  // display: block;
+  font-weight: bolder;
+  color: $color-yellow;
+  opacity: 0.8;
+  transition: all 250ms ease;
   &:hover {
-    color: inherit;
+    opacity: 1;
   }
   &:visited {
-    color: inherit;
   }
 }

@@ -1,0 +1,29 @@
+$bg-img: "../img/logan-lambert-1100600-unsplash.jpg";
+
+body {
+  background: transparent;
+}
+
+.cosmos {
+  background-position: center center;
+  background-size: 100%;
+  background-image: url($bg-img);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.cosmos:before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  content: "";
+}
+
+.cosmos > * {
+  position: relative;
+}
+
