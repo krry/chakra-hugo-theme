@@ -6,11 +6,4 @@
       <h3>{{ $.Site.Params.description }}</h3>
     </a>
   </div>
-  <nav>
-    <ul class="list-reset shellink">
-      {{ range .Site.Menus.main }}
-      <li><a class="" href="{{.URL}}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </nav>
 </header>

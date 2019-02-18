@@ -6,12 +6,18 @@
 .tag-term a {
   color: $color-gray;
   text-decoration: none;
-  padding: 0.25em 0.5em;
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 75%;
-  border-radius: 0.25em;
 }
-aside .tag-term a {
-  color: $color-white;
+
+aside {
+  .list-inline .tag-term {
+    margin-right: 0;
+    a {
+      color: $color-white;
+      padding: 0.25em 0.5em;
+      border-radius: 0.25em;
+    }
+  }
 }

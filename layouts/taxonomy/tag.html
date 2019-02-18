@@ -1,7 +1,7 @@
 {{ define "main" -}}
 <div class="post">
-  <h1>{{ .Title }}</h1>
-  <h2>Mentions</h2>
+  <h1 class="post-title">{{ .Title }}</h1>
+  <h3 class="post-subtitle">Mentioned in:</h3>
   <dl>
     {{ range .Data.Pages }}
     <dt><a href="{{.RelPermalink}}">{{ .Title }}</a></dt>
@@ -10,4 +10,7 @@
   </dl>
   {{ partial "tags/sources.html" . }}
 </div>
+{{- end }}
+{{ define "aside" -}}
+{{ partial "tags/cloud.html" . }}
 {{- end }}

@@ -31,19 +31,20 @@ body {
   background: $color-bg;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: $font-lead;
   color: $color-blue;
 }
 
-.post {
-  p, span, ul, ol {
+.post, .post-summary {
+  p, span, ul, ol, dl {
     font-family: $font-body;
   }
 }
 
 blockquote {
   position: relative;
+  font-style: italic;
 }
 
 blockquote:before {
@@ -58,6 +59,7 @@ blockquote:before {
 blockquote cite {
   text-align: right;
   display: block;
+  font-style: normal;
 }
 
 .disable-hover,

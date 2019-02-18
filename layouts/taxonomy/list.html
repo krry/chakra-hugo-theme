@@ -1,4 +1,5 @@
 {{ define "main" -}}
+<h1>{{ .Title }}</h1>
 <ul class="list-tags">
   {{ range .Data.Pages -}}
   <li>
@@ -7,4 +8,7 @@
   </li>
   {{- end -}}
 </ul>
+{{- end }}
+{{ define "aside" -}}
+{{ partial "tags/cloud.html" . }}
 {{- end }}

@@ -1,9 +1,11 @@
 footer p {
-  // line-height: 1.25;
   font-size: 75%;
   opacity: 0.75;
+  line-height: 1.25rem;
 }
 
-footer p a {
-  display: block;
+footer .shellink a {
+  color: inherit;
 }
+
+

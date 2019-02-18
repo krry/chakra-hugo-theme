@@ -8,7 +8,15 @@
   @extend .list-reset;
   li {
     display: inline-block;
-    margin: 0 0.25em;
+    margin-right: 0.5rem;
   }
 }
 
+dt {
+  font-weight: bolder;
+  margin-bottom: 0.5em;
+}
+
+dd + dt {
+  margin-top: 1em;
+}
