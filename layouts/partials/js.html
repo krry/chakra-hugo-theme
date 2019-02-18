@@ -1,7 +1,7 @@
-{{ $custom := resources.Get "scripts/main.js" | resources.ExecuteAsTemplate "script.main.js" . }}
+{{ $custom := resources.Get "js/main.js" | resources.ExecuteAsTemplate "script.main.js" . }}
 
 {{/*
-{{ $vendor := resources.Get "scripts/vendor/vendor.js" }}
+{{ $vendor := resources.Get "js/vendor/vendor.js" }}
   {{ if .Params.js }}
     {{ $page := resources.Get .Params.js }}
   {{ end }}

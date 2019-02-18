@@ -1,0 +1,33 @@
+:root {
+
+  /* COLOR CODES
+   * white: #e5e4e2;
+   * black: #0f0e0c;
+   * blue: #26619c;
+  */
+
+  --color-bg:  #e5e4e2; /* white */
+  --color-text: #0f0e0c; /* black */
+  --color-link: #26619c; /* blue lapis */
+}
+
+@custom-media --phone (width < 684px);
+@custom-media --tablet (width < 900px);
+@custom-media --desktop (width < 1140px);
+
+/* how to use custom media query */
+/* @media --phone { */
+/*   font-size: 16px; */
+/* } */
+
+@define-mixin greater-icon $stroke-width: 3px, $width: .95rem, $height: 100% {
+  .greater-icon {
+    width: $width;
+    height: $height;
+
+    polyline {
+      stroke: currentColor;
+      stroke-width: $stroke-width;
+    }
+  }
+}

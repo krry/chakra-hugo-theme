@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+@media --desktop {
+  html {
+    font-size: 125%;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  color: var(--color-link);
+}
+
+@mixin greater-icon 4px, 1rem;

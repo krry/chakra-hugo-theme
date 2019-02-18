@@ -1,6 +1,0 @@
-[submodule "assets/styles/vendor/normalize"]
-	path = assets/styles/vendor/normalize
-	url = https://github.com/JohnAlbin/normalize-scss
-[submodule "assets/styles/normalize"]
-	path = assets/styles/normalize
-	url = https://github.com/krry/normalize-scss
