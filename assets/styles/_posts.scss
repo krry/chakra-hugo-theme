@@ -1,0 +1,55 @@
+.post-title,
+.post-lead, 
+.post-subtitle {
+  margin: 0.5rem 0;
+  line-height: 1.15;
+}
+
+.byline {
+  margin: 1rem 0;
+  display: flex;
+}
+
+.byline > * {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.post-date {
+  color: $color-gray;
+  font-size: 0.75em;
+  order: 1;
+}
+.post-date + .list-tags {
+  flex: 4;
+  order: 2;
+  text-align: right;
+}
+
+a.read-more {
+  color: inherit;
+  text-decoration: none;
+  &:visited {
+    opacity: 0.8;
+  }
+}
+
+.post {
+  padding: 4em;
+}
+
+.post-summary {
+  background-color: $color-white;
+  margin-bottom: 3em;
+  position: relative;
+  padding: 2em;
+  border-radius: $base-line-height;
+  transition: all 250ms ease-out;
+  border: 1px solid transparent;
+}
+
+.post-summary:hover {
+  border-color: $color-yellow;
+  background: opacify(desaturate(lighten($color-yellow, 30%), 20%), 0.5);
+}
+

@@ -1,0 +1,8 @@
+{{ with .Params.sources -}}
+<h3>Sources</h3>
+<ul>
+  {{ range $index, $source := . }}
+  <li><a href="{{ $source }}" target="_blank">{{ $index }}</a></li>
+  {{- end -}}
+</ul>
+{{- end -}}

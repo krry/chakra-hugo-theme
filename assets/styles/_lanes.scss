@@ -8,14 +8,12 @@ body {
 }
 
 .lane {
+  position: relative;
+  min-height: 100vh;
   overflow-y: scroll;
   display: flex;
-  min-height: 100vh;
+  flex: 1;
   flex-direction: column;
-}
-
-.left.lane {
-  order: -1;
 }
 
 .right.lane {
@@ -27,18 +25,15 @@ body {
 }
 
 main.lane {
-  flex: 1;
-  order: 1;
-  background: $color-white;
+  flex: 3;
   color: $color-black;
-  padding: 2rem 4rem 4rem;
+  border-radius: 0 $base-line-height $base-line-height 0;
 }
 
 aside.lane {
-  order: 2;
-  background-color: $color-purple;
+  background-color: transparent;
   color: $color-white;
-  width: 12em;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 2rem;
 }

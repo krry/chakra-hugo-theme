@@ -1,0 +1,13 @@
+{{ define "main" -}}
+<div class="post">
+  <h1>{{ .Title }}</h1>
+  <h2>Mentions</h2>
+  <dl>
+    {{ range .Data.Pages }}
+    <dt><a href="{{.RelPermalink}}">{{ .Title }}</a></dt>
+    <dd>{{ .Summary }}</dd>
+    {{ end }}
+  </dl>
+  {{ partial "tags/sources.html" . }}
+</div>
+{{- end }}

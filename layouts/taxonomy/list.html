@@ -1,0 +1,10 @@
+{{ define "main" -}}
+<ul class="list-tags">
+  {{ range .Data.Pages -}}
+  <li>
+    <span><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+    {{ partial "tags/sources.html" . }}
+  </li>
+  {{- end -}}
+</ul>
+{{- end }}

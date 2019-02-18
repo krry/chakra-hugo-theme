@@ -1,7 +1,17 @@
 .brand {
   margin: 1em 0;
+  cursor: default;
 }
 
 .site-title {
-  margin: 0 auto;
+  color: white;
+  margin: 0.5em 0 0.25em;
 }
+
+.brand h2,
+.brand h3 {
+  color: white;
+  margin-top: 0;
+  font-family: $lato;
+}
+

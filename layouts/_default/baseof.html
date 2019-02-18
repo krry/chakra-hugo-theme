@@ -2,6 +2,7 @@
   <body>
     <aside class="right lane">
       {{ partial "header.html" . }}
+      {{- block "aside" . }}{{- end }}
       {{ partial "footer.html" . }}
     </aside>
     <main id="content" class="content left lane" aria-role="main">

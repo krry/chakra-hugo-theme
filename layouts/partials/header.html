@@ -1,12 +1,15 @@
-<header class="lane">
-  <div class="brand">
-    <div class="logo"></div>
-    <h1 class="site-title">{{ .Site.Title }}</h1>
+<header>
+  <div class="brand shellink">
+    <a class="" href="{{ .Site.Home.RelPermalink }}">
+      <div class="logo"></div>
+      <h1 class="site-title">{{ $.Site.Title }}</h1>
+      <h3>{{ $.Site.Params.description }}</h3>
+    </a>
   </div>
   <nav>
-    <ul>
+    <ul class="list-reset shellink">
       {{ range .Site.Menus.main }}
-      <li><a href="{{.URL}}">{{ .Name }}</a></li>
+      <li><a class="" href="{{.URL}}">{{ .Name }}</a></li>
       {{ end }}
     </ul>
   </nav>

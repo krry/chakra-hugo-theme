@@ -1,0 +1,17 @@
+.tag-term a:before {
+  content: "#";
+  font-size: 87.5%;
+}
+
+.tag-term a {
+  color: $color-gray;
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 75%;
+  border-radius: 0.25em;
+}
+aside .tag-term a {
+  color: $color-white;
+}
