@@ -1,17 +1,18 @@
+
 .post-title,
-.post-lead, 
+.post-lead,
 .post-subtitle {
   margin: 0.5rem 0;
   line-height: 1.15;
 }
 
 .post-lead {
-  font-family: $lato;
+  font-family: var(--font-base);
   text-transform: uppercase;
 }
 
 .post-date {
-  color: $color-gray;
+  color: var(--color-muted);
   font-size: 0.75em;
   margin-bottom: 0.5rem;
   display: block;
@@ -50,22 +51,22 @@ a.read-more {
 .post {
   padding: 4em;
   min-height: 100vh;
-  background-color: $color-white;
-  border-radius: 0 $base-line-height $base-line-height 0;
+  background-color: var(--white);
+  border-radius: 0 24px 24px 0;
 }
 
 .post-summary {
   position: relative;
   margin: 0 2em 2em;
   padding: 2em;
-  background-color: $color-white;
+  background-color: var(--white);
   border: 1px solid transparent;
-  border-radius: $base-line-height;
+  border-radius: 24px;
   transition: all 250ms ease-out;
 }
 
 .post-summary:hover {
-  border-color: $color-yellow;
-  background: opacify(desaturate(lighten($color-yellow, 30%), 20%), 0.5);
+  border-color: var(--color-done);
+  background-color: var(--color-alert);
 }
 

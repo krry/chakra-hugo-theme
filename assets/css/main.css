@@ -6,18 +6,15 @@
 */
 
 @import 'variables';
-@import 'base';
-
-/*
 @import 'normalize';
+@import 'base';
+@import 'back';
 @import 'lanes';
-@import 'nav';
 @import 'links';
+@import 'lists';
 @import 'header';
+@import 'nav';
+@import 'footer';
+@import 'hero';
 @import 'posts';
 @import 'tags';
-@import 'cosmos';
-@import 'homepage';
-@import 'footer';
-@import 'lists';
-*/

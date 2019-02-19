@@ -1,0 +1,39 @@
+/* enable side by side scrolling lanes */
+@media --tablet {
+  html, body {
+    height: 100vh;
+  }
+
+  body {
+    overflow: hidden;
+    display: flex;
+  }
+
+  .lane {
+    position: relative;
+    min-height: 100vh;
+    overflow-y: scroll;
+    flex: 1;
+    flex-direction: column;
+    &.right {
+      order: 2;
+    }
+    main& {
+      flex: 3;
+    }
+    aside& {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      text-align: center;
+    }
+  }
+  .brand: {
+    flex-shrink: 0;
+  }
+}
+
+.inverse {
+  color: var(--white);
+  background-color: var(--black);
+}

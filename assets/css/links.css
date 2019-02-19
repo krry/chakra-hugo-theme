@@ -1,15 +1,15 @@
+
 a {
-  color: $color-green;
+  color: var(--color-link);
 }
-.shellink a {
+
+.inverse a {
   text-decoration: none;
   font-weight: bolder;
-  color: $color-yellow;
+  color: var(--color-highlight);
   opacity: 0.8;
   transition: all 250ms ease;
   &:hover {
     opacity: 1;
-  }
-  &:visited {
   }
 }

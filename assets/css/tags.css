@@ -1,10 +1,11 @@
+
 .tag-term a:before {
   content: "#";
   font-size: 87.5%;
 }
 
 .tag-term a {
-  color: $color-gray;
+  color: var(--color-muted);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: lighter;
@@ -15,7 +16,7 @@ aside {
   .list-inline .tag-term {
     margin-right: 0;
     a {
-      color: $color-white;
+      color: var(--white);
       padding: 0.25em 0.5em;
       border-radius: 0.25em;
     }

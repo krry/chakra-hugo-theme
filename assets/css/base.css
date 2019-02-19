@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: var(--font-base);
 }
 
 body {
@@ -23,4 +24,33 @@ a {
   color: var(--color-link);
 }
 
-@mixin greater-icon 4px, 1rem;
+h1, h2 {
+  color: var(--color-title);
+  font-family: var(--font-title);
+}
+
+.post, .post-summary {
+  p, span, ul, ol, dl, blockquote {
+    font-family: var(--font-text);
+  }
+}
+
+blockquote {
+  position: relative;
+  font-style: italic;
+}
+
+blockquote:before {
+  position: absolute;
+  left: -0.5em;
+  top: 0;
+  content: "❝";
+  font-size: 4em;
+  color: hsla(0, 0%, 50%, 0.5);
+}
+blockquote cite {
+  text-align: right;
+  display: block;
+  font-style: normal;
+}
+
