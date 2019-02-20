@@ -1,4 +1,8 @@
-{{ define "main" -}}
+{{ define "nav" -}}
+{{ partial "tags/cloud.html" . }}
+{{- end -}}
+
+{{- define "main" -}}
 <div class="post">
   {{- with .Params.title_lead -}}
   <h3 class="post-lead">{{ . | markdownify }}</h3>
@@ -24,7 +28,4 @@
 <!-- <h2>Comments</h2> -->
 <!-- {{ template "_internal/disqus.html" . }} -->
 <!-- {{- end }} -->
-{{- end }}
-{{ define "aside" -}}
-{{ partial "tags/cloud.html" . }}
 {{- end }}

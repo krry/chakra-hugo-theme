@@ -1,0 +1,17 @@
+.menu-trigger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var(--logo-white);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2.5em;
+  height: 2.5em;
+  z-index: 10;
+  margin: 0.5em;
+  transition: all 500ms ease 500ms;
+  opacity: 0.8;
+  @media (--tablet) {
+    display: none;
+  }
+}

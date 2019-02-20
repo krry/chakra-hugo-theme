@@ -1,5 +1,6 @@
 /*
- * VARIABLES
+ * MAIN
+ * assembles source for postCSS pipeline
  *
  * TODO: add site params
  * TODO: add page params from front matter
@@ -12,9 +13,11 @@
 @import 'lanes';
 @import 'links';
 @import 'lists';
+@import 'buttons';
 @import 'header';
 @import 'nav';
+@import 'menu';
 @import 'footer';
-@import 'hero';
+@import 'homepage';
 @import 'posts';
 @import 'tags';

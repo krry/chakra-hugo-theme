@@ -1,4 +1,8 @@
-{{ define "main" -}}
+{{ define "nav" -}}
+{{ partial "tags/cloud.html" . }}
+{{- end -}}
+
+{{- define "main" -}}
 <h1>{{ .Title }}</h1>
 <ul class="list-tags">
   {{ range .Data.Pages -}}
@@ -8,7 +12,4 @@
   </li>
   {{- end -}}
 </ul>
-{{- end }}
-{{ define "aside" -}}
-{{ partial "tags/cloud.html" . }}
 {{- end }}

@@ -1,5 +1,11 @@
 :root {
 
+  /* SIZES
+   *
+   */
+  --font-size: 16px;
+  --curvature: 24px;
+
   /* COLOR CODES
    * white: rgb(206, 223, 224);
    * black: rgb(6, 7, 10);
@@ -30,16 +36,17 @@
    * title: Righteous, sans-serif
    * */
 
-  --font-base: "Lato", sans-serif;
+  --font-base: "Lato", system-ui;
   --font-text: "Aleo", serif;
   --font-title: "Righteous", sans-serif;
 
-  --bg-img: "../img/logan-lambert-1100600-unsplash.jpg";
+  --bg-img: url("../img/logan-lambert-1100600-unsplash.jpg");
+  --logo-white: url('../img/atmanaut-logo-white.png');
 }
 
 @custom-media --phone (width < 684px);
-@custom-media --tablet (width < 900px);
-@custom-media --desktop (width < 1140px);
+@custom-media --tablet (width > 684px);
+@custom-media --desktop (width > 900px);
 
 /* how to use custom media query */
 /* @media --phone { */

@@ -1,18 +1,33 @@
+/* when header is shown, big logo, centered content, show tag cloud */
+header {
+  text-align: center;
 
-.brand {
-  margin: 1em 0;
-  cursor: default;
-}
+  .brand {
+    padding: 1em 0;
+    cursor: default;
+  }
 
-.site-title {
-  color: white;
-  margin: 0.5em 0 0.25em;
-}
+  .logo {
+    height: 7em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
 
-.brand h2,
-.brand h3 {
-  color: white;
-  margin-top: 0;
-  font-family: $lato;
+  .site-title {
+    margin: 0.5em 0 0.25em;
+  }
+
+  .site-tagline {
+    margin-top: 0;
+    font-family: var(--font-base);
+  }
+
+  .site-title, .site-tagline {
+    color: white;
+    display: block;
+  }
+
 }
 

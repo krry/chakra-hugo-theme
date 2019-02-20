@@ -1,5 +1,38 @@
+.inverse {
+  color: var(--white);
+  background-color: var(--black);
+  background-color: transparent;
+}
+
+aside.lane {
+  text-align: center;
+  background-color: transparent;
+}
+
+@media (--phone) {
+  aside.lane {
+    position: absolute;
+    display: flex;
+    padding-top: 4em;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-left: 2em;
+    padding-right: 2em;
+    transition: all 750ms ease;
+    background: var(--black);
+    z-index: 9;
+    transform: translate3d(100%,0,0);
+
+    &.shown {
+      transform: translate3d(0, 0, 0)
+    }
+  }
+}
+
 /* enable side by side scrolling lanes */
-@media --tablet {
+@media (--tablet) {
   html, body {
     height: 100vh;
   }
@@ -25,7 +58,6 @@
       display: flex;
       justify-content: space-between;
       padding: 2rem;
-      text-align: center;
     }
   }
   .brand: {
@@ -33,7 +65,3 @@
   }
 }
 
-.inverse {
-  color: var(--white);
-  background-color: var(--black);
-}

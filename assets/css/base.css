@@ -6,9 +6,10 @@ html {
 body {
   color: var(--color-text);
   background-color: var(--color-bg);
+  margin: 0;
 }
 
-@media --desktop {
+@media (--desktop) {
   html {
     font-size: 125%;
   }

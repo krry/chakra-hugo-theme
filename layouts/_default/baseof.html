@@ -1,8 +1,11 @@
 {{ partial "head.html" . }}
   <body>
-    <aside class="right lane inverse">
+    {{ partial "menu.html" . }}
+    <aside id="menu" class="right lane inverse shown">
       {{ partial "header.html" . }}
-      {{- block "aside" . }}{{- end }}
+      <nav>
+        {{- block "nav" . }}{{- end }}
+      </nav>
       {{ partial "footer.html" . }}
     </aside>
     <main id="content" class="content left lane" aria-role="main">

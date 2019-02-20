@@ -1,26 +1,20 @@
-var url = require("postcss-url");
-var imports = require("postcss-import");
-var nested = require("postcss-nested");
-var postCSSPresetEnv = require("postcss-preset-env");
-var browsers = require("browserslist");
-var cssnano = require("cssnano");
-var color = require("postcss-color-mod-function");
-var mixins = require("postcss-mixins");
-
 module.exports = {
   plugins: [
-    url(),
-    imports({
-      path: 'themes/chakra/assets/css'
+    require("postcss-url")(/*{ options }*/),
+    require("postcss-import")({
+      root: './themes/chakra',
+      path: ['assets/css']
     }),
-    mixins(),
-    nested(),
-    postCSSPresetEnv({
+    require("postcss-normalize")(/*{ options }*/),
+    require("postcss-mixins")(/*{ options }*/),
+    require("postcss-nested")(/*{ options }*/),
+    require("postcss-color-mod-function")(/*{ options }*/),
+    require("postcss-preset-env")({
       stage: 1,
     }),
-    cssnano({
-      preset: "default",
-    }),
-    color(),
+    require("autoprefixer")(/*{ options }*/),
+    // require("cssnano")({
+    //   preset: "default",
+    // }),
   ],
 };

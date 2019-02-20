@@ -1,5 +1,5 @@
 {{ define "main" -}}
-<div class="homepage cosmos inverse">{{ .Content }}</div>
+<div class="homepage inverse">{{ .Content }}</div>
 <div class="posts">
   {{ range .Data.Pages -}}
   <article class="post-summary">
@@ -15,6 +15,6 @@
   {{- end}}
 </div>
 {{- end}}
-{{ define "aside" -}}
+{{ define "nav" -}}
 {{ partial "tags/cloud.html" . }}
 {{- end }}

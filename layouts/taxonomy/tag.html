@@ -1,4 +1,8 @@
-{{ define "main" -}}
+{{ define "nav" -}}
+{{ partial "tags/cloud.html" . }}
+{{- end -}}
+
+{{- define "main" -}}
 <div class="post">
   <h1 class="post-title">{{ .Title }}</h1>
   <h3 class="post-subtitle">Mentioned in:</h3>
@@ -10,7 +14,4 @@
   </dl>
   {{ partial "tags/sources.html" . }}
 </div>
-{{- end }}
-{{ define "aside" -}}
-{{ partial "tags/cloud.html" . }}
 {{- end }}

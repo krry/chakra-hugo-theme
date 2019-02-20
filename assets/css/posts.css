@@ -18,7 +18,7 @@
   display: block;
 }
 
-@media screen and (min-width: 1023px) {
+@media (--desktop) {
   .byline {
     display: flex;
     margin: 1rem 0;
@@ -52,21 +52,28 @@ a.read-more {
   padding: 4em;
   min-height: 100vh;
   background-color: var(--white);
-  border-radius: 0 24px 24px 0;
+  border-radius: var(--curvature);
+  margin: 2em 0;
+  @media (--tablet) {
+    border-radius: 0 var(--curvature) var(--curvature) 0;
+    margin: 0;
+  }
 }
 
 .post-summary {
   position: relative;
-  margin: 0 2em 2em;
+  margin-bottom: 2em;
+  @media (--tablet) {
+    margin: 0 2em 2em;
+  }
   padding: 2em;
   background-color: var(--white);
-  border: 1px solid transparent;
-  border-radius: 24px;
+  border-radius: var(--curvature);
   transition: all 250ms ease-out;
 }
 
 .post-summary:hover {
   border-color: var(--color-done);
-  background-color: var(--color-alert);
+  background-color: var(--color-highlight);
 }
 
