@@ -31,11 +31,25 @@
 
 });
 
+// allow :active styles to work in CSS on mobile safari
+document.addEventListener("touchstart", function(){}, true);
+
 domready(function () {
   console.info('DOM is in the browser.');
   var menuTrigger = document.querySelector('#menu_trigger');
 
   menuTrigger.addEventListener('click', function(){
+    menuTrigger.classList.toggle('triggered');
     document.querySelector('#menu').classList.toggle('shown');
   });
+
+  window.addEventListener('keydown', handleFirstTab);
 });
+
+function handleFirstTab(e) {
+  if (e.keyCode === 9) { // the "I am a keyboard user" key
+    document.body.classList.add('user-is-tabbing');
+    window.removeEventListener('keydown', handleFirstTab);
+  }
+}
+

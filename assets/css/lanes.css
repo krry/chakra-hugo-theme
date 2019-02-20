@@ -1,25 +1,41 @@
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+}
+
 .inverse {
   color: var(--white);
   background-color: var(--black);
   background-color: transparent;
 }
 
+.lane {
+  position: relative;
+  min-height: 100vh;
+  overflow-y: scroll;
+  flex: 1;
+  flex-direction: column;
+}
+
 aside.lane {
   text-align: center;
   background-color: transparent;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
 }
 
 @media (--phone) {
   aside.lane {
-    position: absolute;
-    display: flex;
+    position: fixed;
     padding-top: 4em;
-    flex-direction: column;
-    justify-content: space-evenly;
     height: 100vh;
     overflow-y: scroll;
-    padding-left: 2em;
-    padding-right: 2em;
     transition: all 750ms ease;
     background: var(--black);
     z-index: 9;
@@ -33,31 +49,12 @@ aside.lane {
 
 /* enable side by side scrolling lanes */
 @media (--tablet) {
-  html, body {
-    height: 100vh;
-  }
-
-  body {
-    overflow: hidden;
-    display: flex;
-  }
-
   .lane {
-    position: relative;
-    min-height: 100vh;
-    overflow-y: scroll;
-    flex: 1;
-    flex-direction: column;
     &.right {
       order: 2;
     }
     main& {
       flex: 3;
-    }
-    aside& {
-      display: flex;
-      justify-content: space-between;
-      padding: 2rem;
     }
   }
   .brand: {

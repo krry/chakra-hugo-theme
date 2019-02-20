@@ -9,9 +9,12 @@
   height: 2.5em;
   z-index: 10;
   margin: 0.5em;
-  transition: all 500ms ease 500ms;
+  transition: all 500ms ease;
   opacity: 0.8;
   @media (--tablet) {
     display: none;
+  }
+  &.triggered {
+    transform: rotateZ(-270deg);
   }
 }
