@@ -39,8 +39,10 @@
   --font-base: "Lato", system-ui;
   --font-text: "Aleo", serif;
   --font-title: "Righteous", sans-serif;
+  --font-code: "Inconsolata", monospace;
 
-  --bg-img: url("../img/logan-lambert-1100600-unsplash.jpg");
+  --bg-img-phone: url("../img/logan-lambert-1100600-unsplash-phone.jpg");
+  --bg-img-full: url("../img/logan-lambert-1100600-unsplash.jpg");
   --logo-white: url('../img/atmanaut-logo-white.png');
 }
 

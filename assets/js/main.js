@@ -44,6 +44,7 @@ domready(function () {
   });
 
   window.addEventListener('keydown', handleFirstTab);
+
 });
 
 function handleFirstTab(e) {

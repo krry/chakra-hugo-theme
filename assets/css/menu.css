@@ -11,10 +11,17 @@
   margin: 0.5em;
   transition: all 500ms ease;
   opacity: 0.8;
+  cursor: pointer;
   @media (--tablet) {
     display: none;
   }
   &.triggered {
     transform: rotateZ(-270deg);
+  }
+  &:hover {
+    width: 2.8em;
+    height: 2.8em;
+    margin: 0.1em;
+    opacity: 1;
   }
 }

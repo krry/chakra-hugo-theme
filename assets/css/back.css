@@ -6,7 +6,12 @@ body {
 .wallpaper {
   background-position: center center;
   background-size: cover;
-  background-image: var(--bg-img);
+  @media (--phone) {
+    background-image: var(--bg-img-phone) at-2x;
+  }
+  @media (--tablet) {
+    background-image: var(--bg-img-full) at-2x;
+  }
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;

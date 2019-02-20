@@ -13,6 +13,7 @@ module.exports = {
       stage: 1,
     }),
     require("autoprefixer")(/*{ options }*/),
+    require("postcss-at2x")(/*{ options }*/),
     // require("cssnano")({
     //   preset: "default",
     // }),
