@@ -5,28 +5,18 @@
   <head>
     <link href="//gmpg.org/xfn/11" rel="profile">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    {{ .Hugo.Generator }}
-
-    <!-- mobile responsive -->
+    {{- .Hugo.Generator -}}
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- meta content -->
     <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-
     {{ if .IsHome -}}
     <title>{{ .Site.Title}}</title>
     {{- else -}}
-    <title>{{ .Title }} &middot; {{ .Site.Title}}</title>
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
     {{- end }}
-
-    <!-- Styles -->
-    {{ partial "css.html" . }}
-    {{ partial "head_fonts.html" . }}
-
-    <!-- Scripts -->
-    {{ partial "js.html" . }}
-
-    <!-- Icons -->
+    {{ partial "css.html" . -}}
+    {{- partial "head_fonts.html" . -}}
+    {{- $custom := resources.Get "js/main.js" -}}
+    <script type="text/javascript" src="{{ $custom.Permalink }}" media="screen"></script>
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/icons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/icons/apple-touch-icon-72x72.png" />
@@ -39,10 +29,8 @@
     <meta name="application-name" content="Atmanaut"/>
     <meta name="msapplication-TileColor" content="#E5E4E2" />
     <meta name="msapplication-TileImage" content="/icons/usmstile-144x144.png" />
-
-    <!-- RSS -->
-    {{ if .RSSLink }}
+    {{ if .RSSLink -}}
     <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
-    {{ end }}
+    {{- end }}
   </head>
 
