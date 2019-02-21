@@ -6,16 +6,18 @@ module.exports = {
       path: ['assets/css']
     }),
     require("postcss-normalize")(/*{ options }*/),
-    require("postcss-mixins")(/*{ options }*/),
+    // require("postcss-mixins")(/*{ options }*/),
     require("postcss-nested")(/*{ options }*/),
+    // require("postcss-get-color")(/*{ options }*/),
     require("postcss-color-mod-function")(/*{ options }*/),
     require("postcss-preset-env")({
       stage: 1,
     }),
+    // require("postcss-easing-gradients")(/*{ options }*/),
     require("autoprefixer")(/*{ options }*/),
-    require("postcss-at2x")(/*{ options }*/),
-    // require("cssnano")({
-    //   preset: "default",
-    // }),
+    // require("postcss-at2x")(/*{ options }*/),
+    require("cssnano")({
+      preset: "default",
+    }),
   ],
 };

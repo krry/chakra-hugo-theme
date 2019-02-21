@@ -31,22 +31,28 @@
 
 });
 
-// allow :active styles to work in CSS on mobile safari
-document.addEventListener("touchstart", function(){}, true);
 
 domready(function () {
-  console.info('DOM is in the browser.');
-  var menuTrigger = document.querySelector('#menu_trigger');
+  console.info('DOM is content and loaded.');
 
-  menuTrigger.addEventListener('click', function(){
-    menuTrigger.classList.toggle('triggered');
+  // wire up the menu trigger button
+  document.querySelector('#menu_trigger').addEventListener('click', function(){
+    this.classList.toggle('triggered');
     document.querySelector('#menu').classList.toggle('shown');
   });
 
+  // sense whether user navs with keyboard
   window.addEventListener('keydown', handleFirstTab);
 
+  // allow :active styles to work in CSS on mobile safari
+  document.addEventListener("touchstart", function(){}, true);
+
+  // when the dom is loaded, fade in the page
+  document.body.classList.remove('dom-loading');
+  document.documentElement.style.backgroundColor="";
 });
 
+// if keyboard navver, leave the visual accommodations alone
 function handleFirstTab(e) {
   if (e.keyCode === 9) { // the "I am a keyboard user" key
     document.body.classList.add('user-is-tabbing');

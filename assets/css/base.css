@@ -7,6 +7,11 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   margin: 0;
+  transition: opacity 1s ease;
+}
+
+.dom-loading {
+  opacity: 0;
 }
 
 @media (--desktop) {
