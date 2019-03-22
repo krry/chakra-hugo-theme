@@ -6,31 +6,28 @@
   --font-size: 16px;
   --curvature: 24px;
 
-  /* COLOR CODES
-   * white: rgb(206, 223, 224);
-   * black: rgb(6, 7, 10);
-   * tan: rgb(162, 128, 83);
-   * brown: rgb(124, 89, 50);
-   * green: rgb(68, 132, 69);
-   * green-light: rgb(170, 224, 159);
-   * green-dark: rgb(4, 26, 24);
-   * gray: rgb(67, 80, 82);
-   * gray-dark: rgb(25, 30, 32);
-   * gray-light: rgb(107, 126, 139);
-   *
-  */
+  /* COLOR CODES */
   --white: rgb(206, 223, 224);
-  --black: rgb(25, 30, 32);
-  --color-bg: rgb(206, 223, 224); /* white */
-  --color-text: rgb(25, 30, 32); /* dark grey */
-  --color-link: rgb(68, 132, 69); /* green */
-  --color-title: rgb(4, 26, 24); /* dark green */
-  --color-highlight: rgb(170, 224, 159); /* light green */
-  --color-muted: rgb(67, 80, 82); /* medium gray */
-  --color-done: rgb(124, 89, 50); /* brown */
-  --color-alert: rgb(162, 128, 83); /* tan */
+  --black: rgb(6, 7, 10);
+  --tan: rgb(162, 128, 83);
+  --brown: rgb(124, 89, 50);
+  --green: rgb(68, 132, 69);
+  --green-light: rgb(170, 224, 159);
+  --green-dark: rgb(4, 26, 24);
+  --gray: rgb(67, 80, 82);
+  --gray-dark: rgb(25, 30, 32);
+  --gray-light: rgb(107, 126, 139);
 
-  /* FONTS 
+  --color-bg: var(--white);
+  --color-text: var(--gray-dark);
+  --color-link: var(--green);
+  --color-title: var(--green-dark);
+  --color-highlight: var(--gray-light);
+  --color-muted: var(--gray);
+  --color-done: var(--brown);
+  --color-alert: var(--tan);
+
+  /* FONTS
    * base: Lato, sans-serif
    * text: Aleo, serif
    * title: Righteous, sans-serif
@@ -69,6 +66,7 @@
 
 /* to use mixin */
 /* @mixin greater-icon 4px, 1rem, 40%; */
+
 .color-primary-0 { color: #E30050 }	/* Main Primary color */
 .color-primary-1 { color: #F61162 }
 .color-primary-2 { color: #F90058 }

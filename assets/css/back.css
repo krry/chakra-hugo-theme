@@ -6,25 +6,27 @@ body {
 .wallpaper {
   background-position: center center;
   background-size: cover;
+
   @media (--phone) {
     background-image: var(--bg-img-phone);
   }
+
   @media (--tablet) {
     background-image: var(--bg-img-full);
   }
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
 }
 
-.wallpaper:before {
+.wallpaper::before {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   background-color: var(--color-title);
-  /* background: linear-gradient(to bottom, rgb(124, 89, 50), cubic-bezier(0.37, 0.03, 0.45, 0.95), hsl(107, 45%, 72%)); */
   opacity: 0.7;
   content: "";
 }
@@ -32,4 +34,3 @@ body {
 .wallpaper > * {
   position: relative;
 }
-
