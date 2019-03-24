@@ -1,64 +1,67 @@
 
-html, body {
-  height: 100vh;
+html,
+body {
+    height: 100vh;
 }
 
 body {
-  overflow: hidden;
-  display: flex;
+    overflow: hidden;
+    display: flex;
 }
 
 .inverse {
-  color: var(--white);
-  background-color: var(--black);
-  background-color: transparent;
+    color: var(--white);
+    background-color: var(--black);
+    background-color: transparent;
 }
 
 .lane {
-  position: relative;
-  min-height: 100vh;
-  overflow-y: scroll;
-  flex: 1;
-  flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    overflow-y: scroll;
+    flex: 1;
+    flex-direction: column;
 }
 
 aside.lane {
-  text-align: center;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+    display: flex;
+    text-align: center;
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 2rem;
 }
 
 @media (--phone) {
-  aside.lane {
-    position: fixed;
-    padding-top: 4em;
-    height: 100vh;
-    overflow-y: scroll;
-    transition: all 750ms ease;
-    background: var(--black);
-    z-index: 9;
-    transform: translate3d(100%,0,0);
+    aside.lane {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 4em;
+        overflow-y: scroll;
+        background: var(--black);
+        z-index: 9;
+        transition: all 750ms ease;
+        transform: translate3d(100%, 0, 0);
 
-    &.shown {
-      transform: translate3d(0, 0, 0)
+        &.shown {
+            transform: translate3d(0, 0, 0);
+        }
     }
-  }
 }
 
 /* enable side by side scrolling lanes */
 @media (--tablet) {
-  .lane {
-    &.right {
-      order: 2;
-    }
-    main& {
-      flex: 3;
-    }
-  }
-  .brand: {
-    flex-shrink: 0;
-  }
-}
+    .lane {
+        &.right {
+            order: 2;
+        }
 
+        main& {
+            flex: 3;
+        }
+    }
+
+    .brand: {
+        flex-shrink: 0;
+    }
+}
