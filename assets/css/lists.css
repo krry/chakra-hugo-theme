@@ -1,22 +1,22 @@
 .list-reset {
-  font-family: var(--font-base);
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    font-family: var(--font-base);
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .list-inline {
-  li {
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
+    li {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
 }
 
 dt {
-  font-weight: bolder;
-  margin-bottom: 0.5em;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
 }
 
 dd + dt {
-  margin-top: 1em;
+    margin-top: 1em;
 }

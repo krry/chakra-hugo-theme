@@ -1,33 +1,33 @@
 /* when header is shown, big logo, centered content, show tag cloud */
 header {
-  text-align: center;
+    text-align: center;
 
-  .brand {
-    padding: 1em 0;
-    cursor: default;
-  }
+    .brand {
+        padding: 1em 0;
+        cursor: default;
+    }
 
-  .logo {
-    height: 7em;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-  }
+    .logo {
+        height: 7em;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
 
-  .site-title {
-    margin: 0.5em 0 0.25em;
-  }
+    .site-title {
+        margin: 0.5em 0 0.25em;
+    }
 
-  .site-tagline {
-    margin-top: 0;
-    /* font-family: var(--font-base); */
-  }
+    .site-tagline {
+        margin-top: 0;
 
-  .site-title, .site-tagline {
-    color: white;
-    display: block;
-  }
+        /* font-family: var(--font-base); */
+    }
 
+    .site-title,
+    .site-tagline {
+        color: white;
+        display: block;
+    }
 }
-

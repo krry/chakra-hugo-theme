@@ -1,36 +1,35 @@
-
 body {
-  background: transparent;
+    background: transparent;
 }
 
 .wallpaper {
-  background-position: center center;
-  background-size: cover;
+    background-position: center center;
+    background-size: cover;
 
-  @media (--phone) {
-    background-image: var(--bg-img-phone);
-  }
+    @media (--phone) {
+        background-image: var(--bg-img-phone);
+    }
 
-  @media (--tablet) {
-    background-image: var(--bg-img-full);
-  }
+    @media (--tablet) {
+        background-image: var(--bg-img-full);
+    }
 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
 }
 
 .wallpaper::before {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--color-title);
-  opacity: 0.7;
-  content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-title);
+    opacity: 0.7;
+    content: "";
 }
 
 .wallpaper > * {
-  position: relative;
+    position: relative;
 }

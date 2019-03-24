@@ -1,15 +1,13 @@
-
 .homepage {
-  padding: 3em 1em 2em;
-  text-align: center;
-  color: var(--white);
-  position: sticky;
-  top: 0px;
-  width: 100%;
-}
-
-.homepage {
-  h1, h2 {
+    padding: 3em 1em 2em;
+    text-align: center;
     color: var(--white);
-  }
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    h1,
+    h2 {
+        color: var(--white);
+    }
 }

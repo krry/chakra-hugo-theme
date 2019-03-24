@@ -1,88 +1,52 @@
 :root {
+    /* SIZES */
+    --font-size: 16px;
+    --curvature: 24px;
 
-  /* SIZES
-   *
-   */
-  --font-size: 16px;
-  --curvature: 24px;
+    /* COLOR CODES */
+    --white: rgb(206, 223, 224);
+    --black: rgb(6, 7, 10);
+    --tan: rgb(162, 128, 83);
+    --brown: rgb(124, 89, 50);
+    --green: rgb(68, 132, 69);
+    --green-light: rgb(170, 224, 159);
+    --green-dark: rgb(4, 26, 24);
+    --gray: rgb(67, 80, 82);
+    --gray-dark: rgb(25, 30, 32);
+    --gray-light: rgb(107, 126, 139);
+    --color-bg: var(--white);
+    --color-text: var(--gray-dark);
+    --color-link: var(--green);
+    --color-title: var(--green-dark);
+    --color-highlight: var(--gray-light);
+    --color-muted: var(--gray);
+    --color-done: var(--brown);
+    --color-alert: var(--tan);
 
-  /* COLOR CODES */
-  --white: rgb(206, 223, 224);
-  --black: rgb(6, 7, 10);
-  --tan: rgb(162, 128, 83);
-  --brown: rgb(124, 89, 50);
-  --green: rgb(68, 132, 69);
-  --green-light: rgb(170, 224, 159);
-  --green-dark: rgb(4, 26, 24);
-  --gray: rgb(67, 80, 82);
-  --gray-dark: rgb(25, 30, 32);
-  --gray-light: rgb(107, 126, 139);
+    /* FONTS
+     * base: Lato, sans-serif
+     * text: Aleo, serif
+     * title: Righteous, sans-serif
+     * */
 
-  --color-bg: var(--white);
-  --color-text: var(--gray-dark);
-  --color-link: var(--green);
-  --color-title: var(--green-dark);
-  --color-highlight: var(--gray-light);
-  --color-muted: var(--gray);
-  --color-done: var(--brown);
-  --color-alert: var(--tan);
+    --font-base: "Lato", system-ui;
+    --font-text: "Aleo", serif;
+    --font-title: "Righteous", sans-serif;
+    --font-code: "Inconsolata", monospace;
 
-  /* FONTS
-   * base: Lato, sans-serif
-   * text: Aleo, serif
-   * title: Righteous, sans-serif
-   * */
-
-  --font-base: "Lato", system-ui;
-  --font-text: "Aleo", serif;
-  --font-title: "Righteous", sans-serif;
-  --font-code: "Inconsolata", monospace;
-
-  --bg-img-phone: url("../img/logan-lambert-1100600-unsplash-phone.jpg");
-  --bg-img-full: url("../img/logan-lambert-1100600-unsplash.jpg");
-  --logo-white: url('../img/atmanaut-logo-white.png');
+    /* IMGS */
+    --bg-img-phone: url("../img/logan-lambert-1100600-unsplash-phone.jpg");
+    --bg-img-full: url("../img/logan-lambert-1100600-unsplash.jpg");
+    --logo-white: url('../img/atmanaut-logo-white.png');
 }
 
+/* MEDIA QUERIES */
 @custom-media --phone (width < 684px);
 @custom-media --tablet (width > 684px);
 @custom-media --desktop (width > 900px);
 
-/* how to use custom media query */
-/* @media --phone { */
-/*   font-size: 16px; */
-/* } */
-
-@define-mixin greater-icon $stroke-width: 3px, $width: .95rem, $height: 100% {
-  .greater-icon {
-    width: $width;
-    height: $height;
-
-    polyline {
-      stroke: currentColor;
-      stroke-width: $stroke-width;
-    }
-  }
-}
-
-/* to use mixin */
-/* @mixin greater-icon 4px, 1rem, 40%; */
-
-.color-primary-0 { color: #E30050 }	/* Main Primary color */
-.color-primary-1 { color: #F61162 }
-.color-primary-2 { color: #F90058 }
-.color-primary-3 { color: #BB0042 }
-.color-primary-4 { color: #8F0033 }
-
-.color-secondary-1-0 { color: #018AAA }	/* Main Secondary color (1) */
-.color-secondary-1-1 { color: #16BDE4 }
-.color-secondary-1-2 { color: #02C0ED }
-.color-secondary-1-3 { color: #016B84 }
-.color-secondary-1-4 { color: #005265 }
-
-.color-secondary-2-0 { color: #FFEE00 }	/* Main Secondary color (2) */
-.color-secondary-2-1 { color: #FFEF11 }
-.color-secondary-2-2 { color: #FFEE00 }
-.color-secondary-2-3 { color: #D6C700 }
-.color-secondary-2-4 { color: #A49800 }
-
-
+/* how to use custom media query
+   @media --phone {
+     font-size: 16px;
+   }
+ */
