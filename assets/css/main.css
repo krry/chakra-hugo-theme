@@ -13,6 +13,7 @@
 @import 'lanes';
 @import 'links';
 @import 'lists';
+@import 'tables';
 @import 'buttons';
 @import 'header';
 @import 'nav';
