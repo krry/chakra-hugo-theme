@@ -1,62 +1,73 @@
 html {
-  box-sizing: border-box;
-  font-family: var(--font-base);
+    box-sizing: border-box;
+    font-family: var(--font-base);
 }
 
 body {
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  margin: 0;
-  transition: opacity 1s ease;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    margin: 0;
+    transition: opacity 1s ease;
 }
 
 .dom-loading {
-  opacity: 0;
+    opacity: 0;
 }
 
 @media (--desktop) {
-  html {
-    font-size: 125%;
-  }
+    html {
+        font-size: 125%;
+    }
 }
 
 *,
-*:before,
-*:after {
-  box-sizing: inherit;
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 a {
-  color: var(--color-link);
+    color: var(--color-link);
 }
 
-h1, h2 {
-  color: var(--color-title);
-  font-family: var(--font-title);
+h1,
+h2 {
+    color: var(--color-title);
+    font-family: var(--font-title);
 }
 
-.post, .post-summary {
-  p, span, ul, ol, dl, blockquote {
-    font-family: var(--font-text);
-  }
+img {
+    max-width: 100%;
 }
 
 blockquote {
-  position: relative;
-  font-style: italic;
+    position: relative;
+    font-style: italic;
 }
 
-blockquote:before {
-  position: absolute;
-  left: -0.5em;
-  top: 0;
-  content: "❝";
-  font-size: 4em;
-  color: hsla(0, 0%, 50%, 0.5);
+blockquote::before {
+    position: absolute;
+    left: -0.5em;
+    top: 0;
+    content: "❝";
+    font-size: 4em;
+    color: hsla(0, 0%, 50%, 0.5);
 }
+
 blockquote cite {
-  text-align: right;
-  display: block;
-  font-style: normal;
+    text-align: right;
+    display: block;
+    font-style: normal;
 }
 
+.post,
+.post-summary {
+    p,
+    span,
+    ul,
+    ol,
+    dl,
+    blockquote {
+        font-family: var(--font-text);
+    }
+}

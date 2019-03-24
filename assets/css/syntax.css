@@ -1,21 +1,30 @@
-.highlight {
-  @media (--phone) {
-    margin: 1em -2em;
-    pre {
-      font-size: 0.75em;
-    }
-  }
-  p, span, ul, ol, dl {
-    font-family: var(--font-code);
-  }
-  pre {
-    padding: 1rem;
-    max-width: 64ch;
-    font-size: 0.875em;
-  }
+pre,
+code,
+samp {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
 
-pre, code, samp {
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
+.highlight {
+    @media (--phone) {
+        margin: 1em -2em;
+
+        pre {
+            font-size: 0.75em;
+        }
+    }
+
+    p,
+    span,
+    ul,
+    ol,
+    dl {
+        font-family: var(--font-code);
+    }
+
+    pre {
+        padding: 1rem;
+        max-width: 64ch;
+        font-size: 0.875em;
+    }
 }
