@@ -21,5 +21,6 @@
 @import 'footer';
 @import 'homepage';
 @import 'posts';
+@import 'searchbox';
 @import 'tags';
 @import 'syntax';

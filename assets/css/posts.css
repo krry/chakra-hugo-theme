@@ -61,6 +61,13 @@
         max-width: 80ch;
     }
 
+    ul,
+    ol {
+        li {
+            line-height: 1.5;
+        }
+    }
+
     @media (--tablet) {
         border-radius: 0 var(--curvature) var(--curvature) 0;
         margin: 0;
