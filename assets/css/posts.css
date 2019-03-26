@@ -1,36 +1,21 @@
-.post-title,
-.post-lead,
-.post-subtitle {
-    line-height: 1.15;
-    margin: 0.5rem 0;
-}
-
-.post-lead {
-    font-family: var(--font-base);
-    text-transform: uppercase;
-}
-
-.post-date {
-    display: block;
-    color: var(--color-muted);
-    font-size: 0.75em;
-    margin-bottom: 0.5rem;
-}
 
 @media (--desktop) {
     .byline {
         display: flex;
         margin: 1rem 0;
+        align-items: baseline;
     }
 
     .byline > * {
         display: flex;
+        flex: 1;
         justify-content: flex-end;
     }
 
     .post-date {
-        margin-bottom: 0;
         order: 1;
+        color: var(--color-muted);
+        padding: 0.25rem 0;
     }
 
     .post-date + .list-tags {
@@ -49,12 +34,24 @@
     }
 }
 
-.post {
+.post,
+.tag {
     padding: 4em 2em;
     min-height: 100vh;
     background-color: var(--white);
     border-radius: var(--curvature);
     margin: 2em 0;
+
+    @media (--tablet) {
+        border-radius: 0 var(--curvature) var(--curvature) 0;
+        margin: 0;
+        padding: 4em;
+    }
+
+    h2,
+    h3 {
+        font-family: var(--font-title);
+    }
 
     p {
         line-height: 1.375;
@@ -68,11 +65,28 @@
         }
     }
 
-    @media (--tablet) {
-        border-radius: 0 var(--curvature) var(--curvature) 0;
-        margin: 0;
-        padding: 4em;
+    .post-title,
+    .tag-title,
+    .tag-subtitle,
+    .post-lead,
+    .post-subtitle {
+        line-height: 1.15;
+        margin: 0.5rem 0;
     }
+
+    h3.post-lead,
+    h3.post-subtitle {
+        color: var(--color-muted);
+        font-family: var(--font-base);
+        line-height: 1rem;
+    }
+
+    .post-date {
+        display: block;
+        color: var(--color-muted);
+        font-size: 0.75em;
+    }
+
 }
 
 .post-summary {
@@ -81,7 +95,7 @@
     padding: 2em;
     background-color: var(--white);
     border-radius: var(--curvature);
-    opacity: 0.75;
+    opacity: 0.9;
     transition: all 250ms ease-out;
 
     &:hover {
@@ -93,4 +107,3 @@
         margin: 0 2em 2em;
     }
 }
-

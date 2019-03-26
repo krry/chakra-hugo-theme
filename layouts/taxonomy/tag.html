@@ -3,9 +3,9 @@
 {{- end -}}
 
 {{- define "main" -}}
-<div class="post">
-  <h1 class="post-title">{{ .Title }}</h1>
-  <h3 class="post-subtitle">Mentioned in:</h3>
+<div class="tag">
+  <h1 class="tag-title">{{ .Title }}</h1>
+  <h3>Discussed in:</h3>
   <dl>
     {{ range .Data.Pages }}
     <dt><a href="{{.RelPermalink}}">{{ .Title }}</a></dt>
