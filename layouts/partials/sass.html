@@ -1,0 +1,10 @@
+{{ $sass := resources.Get "sass/main.scss" }}
+{{ if .Site.IsServer -}}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+{{- else }}
+{{- $style := $sass | resources.ToCSS | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink | absURL }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+{{ end }}
+    <link rel="stylesheet" media="screen" href="/css/app.css">
+    <link rel="stylesheet" media="screen" href="/css/syntax.css">

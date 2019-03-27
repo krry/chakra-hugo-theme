@@ -1,0 +1,24 @@
+.tag-term a::before {
+    content: "#";
+    font-size: 87.5%;
+}
+
+.tag-term a {
+    color: $color-muted;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 75%;
+}
+
+aside {
+    .list-inline .tag-term {
+        margin-right: 0;
+
+        a {
+            color: $white;
+            padding: 0.25em 0.5em;
+            border-radius: 0.25em;
+        }
+    }
+}

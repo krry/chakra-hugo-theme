@@ -1,0 +1,130 @@
+@media #{$desktop} {
+    .byline {
+        display: flex;
+        margin: 1rem 0;
+        align-items: baseline;
+    }
+
+    .byline > * {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .post-date {
+        order: 1;
+        color: $color-muted;
+        padding: 0.25rem 0;
+    }
+
+    .post-date + .list-tags {
+        flex: 4;
+        order: 2;
+        text-align: right;
+    }
+}
+
+.read-more {
+    color: inherit;
+    text-decoration: none;
+
+    &:visited {
+        opacity: 0.8;
+    }
+}
+
+.scrolliner {
+    position: sticky;
+    top: 0;
+    height: 6px;
+    transition: opacity 400ms;
+    width: calc(100% + 8em);
+    transform: translate3d(calc(-100% - 4em), 0, 0);
+    background-color: $color-title;
+
+    &::after {
+        content: "";
+        height: 3px;
+        display: block;
+        width: 100%;
+        background-color: $color-highlight;
+    }
+
+    &.ghost {
+        opacity: 0;
+        transition: none;
+    }
+}
+
+.post,
+.tag {
+    position: relative;
+    min-height: 100vh;
+    margin: 2em 0;
+    padding: 4em 2em;
+    background-color: $white;
+    border-radius: $curvature;
+
+    @media #{$tablet} {
+        margin: 0;
+        padding: 4em;
+        border-radius: 0 $curvature $curvature 0;
+    }
+
+    h2,
+    h3 {
+        font-family: $font-title;
+    }
+
+    p {
+        line-height: 1.375;
+        max-width: 80ch;
+    }
+
+    ul,
+    ol {
+        li {
+            line-height: 1.5;
+        }
+    }
+
+    .post-title,
+    .tag-title,
+    .tag-subtitle,
+    .post-lead,
+    .post-subtitle {
+        line-height: 1.15;
+        margin: 0.5rem 0;
+    }
+
+    h3.post-lead,
+    h3.post-subtitle {
+        color: $color-muted;
+        font-family: $font-base;
+    }
+
+    .post-date {
+        display: block;
+        color: $color-muted;
+        font-size: 0.75em;
+    }
+}
+
+.post-summary {
+    position: relative;
+    margin-bottom: 2em;
+    padding: 2em;
+    background-color: $white;
+    border-radius: $curvature;
+    opacity: 0.9;
+    transition: all 250ms ease-out;
+
+    &:hover {
+        border-color: $color-done;
+        opacity: 1;
+    }
+
+    @media #{$tablet} {
+        margin: 0 2em 2em;
+    }
+}

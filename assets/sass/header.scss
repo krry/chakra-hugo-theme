@@ -1,0 +1,40 @@
+/* when header is shown, big logo, centered content, show tag cloud */
+header {
+    text-align: center;
+
+    .brand {
+        padding: 1em 0;
+        cursor: default;
+    }
+
+    .logo {
+        height: 7em;
+        width: 7em;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transform-origin: center center;
+        transition: 444ms ease-in-out;
+
+        &:hover {
+            transform: rotateZ(-222deg);
+        }
+    }
+
+    .site-title {
+        margin: 0.5em 0 0.25em;
+    }
+
+    .site-tagline {
+        margin-top: 0;
+
+        /* font-family: var(--font-base); */
+    }
+
+    .site-title,
+    .site-tagline {
+        color: white;
+        display: block;
+    }
+}

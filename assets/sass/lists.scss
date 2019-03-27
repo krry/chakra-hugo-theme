@@ -1,0 +1,27 @@
+.list-reset {
+    font-family: $font-base;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.list-inline {
+    li {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+}
+
+dt {
+    font-family: $font-base;
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+}
+
+dd + dt {
+    margin-top: 1em;
+}
+
+.list-sources {
+    font-family: $font-base;
+}
