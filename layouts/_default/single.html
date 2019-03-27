@@ -4,6 +4,7 @@
 
 {{- define "main" -}}
 <div class="post">
+  <div class="scrolliner"></div>
   {{- with .Params.title_lead -}}
   <h3 class="post-lead">{{ . | markdownify }}</h3>
   {{- end -}}

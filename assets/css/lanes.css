@@ -22,6 +22,10 @@ body {
     flex-direction: column;
 }
 
+main.lane {
+    position: relative;
+}
+
 aside.lane {
     display: flex;
     text-align: center;
