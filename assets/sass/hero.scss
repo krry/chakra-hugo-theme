@@ -1,12 +1,12 @@
 .hero {
     padding: 2em;
     text-align: center;
-    color: var(--white);
+    color: $white;
     position: sticky;
     top: 0;
     width: 100%;
 }
 
 .hero h2 {
-    color: var(--white);
+    color: $white;
 }

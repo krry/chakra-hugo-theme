@@ -28,13 +28,11 @@ header {
 
     .site-tagline {
         margin-top: 0;
-
-        /* font-family: var(--font-base); */
     }
 
     .site-title,
     .site-tagline {
-        color: white;
+        color: $white;
         display: block;
     }
 }
