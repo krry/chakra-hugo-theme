@@ -57,17 +57,18 @@
 }
 
 .post,
+.search,
 .tag {
     position: relative;
     min-height: 100vh;
     margin: 2em 0;
-    padding: 4em 2em;
+    padding: 3em 2em;
     background-color: $white;
     border-radius: $curvature;
 
     @media #{$tablet} {
         margin: 0;
-        padding: 4em;
+        padding: 3em;
         border-radius: 0 $curvature $curvature 0;
     }
 
@@ -97,10 +98,17 @@
         margin: 0.5rem 0;
     }
 
-    h3.post-lead,
+    h4.post-lead,
     h3.post-subtitle {
         color: $color-muted;
+    }
+
+    h4.post-lead {
         font-family: $font-base;
+    }
+
+    h3.post-subtitle {
+        font-family: $font-title;
     }
 
     .post-date {
@@ -108,6 +116,10 @@
         color: $color-muted;
         font-size: 0.75em;
     }
+}
+
+.search {
+    background: none;
 }
 
 .post-summary {

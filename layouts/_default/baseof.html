@@ -1,4 +1,11 @@
-{{ partial "head.html" . }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"{{with .Site.LanguageCode}}
+  xml:lang="{{.}}" lang="{{.}}"{{end}} class="wallpaper"
+  style="background-color: hsl(107, 45%, 72%)">
+  <head>
+    {{- partial "head.html" . -}}
+    {{- block "pageStyles" . }}{{- end }}
+  </head>
   <body class="dom-loading">
     {{ partial "menu.html" . }}
     <aside id="menu" class="right lane inverse">
@@ -13,5 +20,6 @@
     {{- block "main" . }}{{- end }}
     </main>
   {{ template "_internal/google_analytics_async.html" . }}
+  {{- block "pageScripts" . }}{{- end }}
   </body>
 </html>

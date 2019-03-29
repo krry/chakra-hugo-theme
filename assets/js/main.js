@@ -38,7 +38,6 @@
             fns.push(fn);
         }
     };
-
 });
 
 
@@ -62,6 +61,7 @@ domready(function () {
     document.documentElement.style.backgroundColor="";
 
     var scrollPercent,
+        scrollPosition,
         relevantHeight,
         showScroll,
         byline = document.querySelector('.byline'),
@@ -70,17 +70,23 @@ domready(function () {
         post = document.querySelector('.post');
 
     // display scroll progress in sticky header
-    main.addEventListener('scroll', function(){
-        bylineHeight = byline.offsetTop;
-        relevantHeight = post.offsetHeight - window.innerHeight;
-        scrollPercent = 100 * main.scrollTop / relevantHeight;
-        if (typeof scrolliner === "object") {
-            showScroll = main.scrollTop < bylineHeight;
-            scrolliner.classList.toggle("ghost", showScroll);
-            scrollinerPosition = -100 + scrollPercent;
-            scrolliner.style.transform = "translate3d(calc("+scrollinerPosition+"% - 4em), 0, 0)";
-        }
-    });
+    if (scrolliner !== null &&
+        byline !== null &&
+        main !== null &&
+        post !== null) {
+        main.addEventListener('scroll', function(){
+            scrollPosition = main.scrollTop;
+            bylineHeight = byline.offsetTop;
+            relevantHeight = post.offsetHeight - window.innerHeight;
+            scrollPercent = 100 * scrollPosition / relevantHeight;
+            if (typeof scrolliner === "object") {
+                showScroll = scrollPosition < bylineHeight;
+                scrolliner.classList.toggle("ghost", showScroll);
+                scrollinerPosition = scrollPercent - 100;
+                scrolliner.style.transform = "translate3d(calc("+scrollinerPosition+"% - 4em), 0, 0)";
+            }
+        });
+    }
 });
 
 // if keyboard navver, leave the visual accommodations alone
