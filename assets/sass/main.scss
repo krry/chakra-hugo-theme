@@ -1,12 +1,13 @@
 /*
  * MAIN
- * assembles source for postCSS pipeline
+ * assembles source for sass compiler
  *
  * TODO: add site params
  * TODO: add page params from front matter
 */
 
 @import 'variables';
+@import 'animation';
 @import 'normalize';
 @import 'base';
 @import 'back';
