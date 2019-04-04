@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/Cellar/node/11.12.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js info coc-ultisnips --json
+  /usr/local/Cellar/node/11.12.0/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js global add stylelint-config-standard
 
 PATH: 
-  /usr/local/Cellar/git/2.20.1/libexec/git-core:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:.:/Users/alan/.gem/ruby/2.3.0:/Library/Ruby/Gems/2.3.0:/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/lib/ruby/gems/2.3.0:/usr/local/Cellar/go/1.12/libexec/bin:/Users/alan/go/bin:/Users/alan/.cargo/bin
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Library/TeX/texbin:.:/Users/alan/.gem/ruby/2.3.0:/Library/Ruby/Gems/2.3.0:/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/lib/ruby/gems/2.3.0:/usr/local/Cellar/go/1.12/libexec/bin:/Users/alan/go/bin:/Users/alan/.cargo/bin
 
 Yarn version: 
   1.15.2

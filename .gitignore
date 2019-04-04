@@ -2,3 +2,4 @@ assets/styles/normalize/*
 node_modules
 resources
 yarn-error.log
+.tags
