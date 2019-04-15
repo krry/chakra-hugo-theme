@@ -9,12 +9,14 @@
   <body class="dom-loading">
     {{ partial "menu.html" . }}
     <aside id="menu" class="right lane inverse">
-      {{ partial "header.html" . }}
-      <nav>
-        {{- block "nav" . }}{{- end }}
-      </nav>
-      {{/* partial "searchbox.html" . */}}
-      {{ partial "footer.html" . }}
+      <div class="waterwing">
+        {{ partial "header.html" . }}
+        <nav>
+          {{- block "nav" . }}{{- end }}
+        </nav>
+        {{/* partial "searchbox.html" . */}}
+        {{ partial "footer.html" . }}
+      </div>
     </aside>
     <main id="content" class="content left lane" aria-role="main">
     {{- block "main" . }}{{- end }}

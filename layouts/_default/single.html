@@ -24,9 +24,15 @@
   </div>
   {{ .Content }}
 </div>
-
-<!-- {{ if .Site.DisqusShortname -}} -->
-<!-- <h2>Comments</h2> -->
-<!-- {{ template "_internal/disqus.html" . }} -->
-<!-- {{- end }} -->
+<div class="post comments">
+  <h2 class="subtitle">Comment</h3>
+  <script src="https://utteranc.es/client.js"
+          repo="krry/atmanaut"
+          issue-term="title"
+          label="😱🤯💬"
+          theme="icy-dark"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
 {{- end }}

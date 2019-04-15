@@ -68,8 +68,12 @@
 
     @media #{$tablet} {
         margin: 0;
-        padding: 3em;
+        padding: 2em;
         border-radius: 0 $curvature $curvature 0;
+    }
+
+    @media #{$desktop} {
+        padding: 3em;
     }
 
     h2,
