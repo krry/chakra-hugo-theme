@@ -76,8 +76,7 @@
         padding: 3em;
     }
 
-    h2,
-    h3 {
+    h2 {
         font-family: $font-title;
     }
 
@@ -109,11 +108,13 @@
 
     h4.post-lead {
         font-family: $font-base;
+        font-style: italic;
+        font-weight: lighter;
     }
 
-    h3.post-subtitle {
-        font-family: $font-title;
-    }
+    // h3.post-subtitle {
+    //     font-family: $font-title;
+    // }
 
     .post-date {
         display: block;

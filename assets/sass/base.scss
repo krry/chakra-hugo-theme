@@ -20,6 +20,15 @@ body {
     }
 }
 
+::placeholder {
+    color: $gray-light;
+}
+
+::selection {
+    background-color: $orchid;
+    color: $extra-white;
+}
+
 *,
 *::before,
 *::after {

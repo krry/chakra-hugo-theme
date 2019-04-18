@@ -3,28 +3,39 @@ $font-size: 16px;
 $curvature: 24px;
 
 /* COLOR CODES */
-$white: rgb(206, 223, 224);
-$black: rgb(6, 7, 10);
-$tan: rgb(162, 128, 83);
-$brown: rgb(124, 89, 50);
-$green: rgb(68, 132, 69);
-$green-light: rgb(170, 224, 159);
-$green-dark: rgb(4, 26, 24);
-$gray: rgb(67, 80, 82);
-$gray-dark: rgb(25, 30, 32);
-$gray-light: rgb(107, 126, 139);
-$color-bg: $white;
-$color-text: $gray-dark;
-$color-link: $green;
-$color-title: $green-dark;
-$color-highlight: $gray-light;
-$color-muted: $gray;
-$color-done: $brown;
-$color-alert: $tan;
-$color-comments-bg: #021012;
-$color-comments-link: #278a97;
-$color-comments-header: #06272c;
-$color-comments-border: #10444d;
+/* COLOR PALETTE */
+$color-salmon:     hsl(340, 53%, 58%);
+$color-flesh:      hsl(340, 53%, 52%);
+$color-vermillion: hsl(9, 72%, 54%);
+$color-teal:       hsl(190, 96%, 33%);
+$color-dank:       hsl(206, 68%, 17%);
+$teal-dark:        hsl(205, 73%, 6%);
+$color-levi:       hsl(205, 93%, 39%);
+$color-cadet:      hsl(205, 87%, 30%);
+$color-peri:       hsl(205, 58%, 48%);
+$pastel-pink:      hsl(295, 51%, 75%);
+$mauve:            hsl(295, 32%, 48%);
+$violet:           hsl(295, 43%, 34%);
+$orchid:           hsl(295, 32%, 39%);
+$color-ink:        hsl(295, 33%, 19%);
+$white:            hsl(205, 23%, 84%);
+$extra-white:      hsl(205, 23%, 94%);
+$gray-light:       hsl(205, 13%, 48%);
+$gray:             hsl(205, 10%, 29%);
+$gray-dark:        hsl(205, 12%, 11%);
+$black:            hsl(225, 25%, 3%);
+$color-bg:         $white;
+$color-text:       $gray-dark;
+$color-link:       $color-levi;
+$color-title:      $color-dank;
+$color-highlight:  $color-peri;
+$color-muted:      $gray;
+$color-done:       $color-ink;
+$color-alert:      $color-vermillion;
+$color-comments-bg: $black;
+$color-comments-link: $color-link;
+$color-comments-header: $color-title;
+$color-comments-border: $teal-dark;
 
 /* FONTS
  * base: Lato, sans-serif
@@ -38,8 +49,8 @@ $font-title: "Righteous", sans-serif;
 $font-code: "Inconsolata", monospace;
 
 /* IMGS */
-$bg-img-phone: url("../img/logan-lambert-1100600-unsplash-phone.jpg");
-$bg-img-full: url("../img/logan-lambert-1100600-unsplash.jpg");
+$bg-img-phone: url("../img/splatter-back-phone.jpg");
+$bg-img-full: url("../img/splatter-back.jpg");
 $logo-white: url('../img/atmanaut-logo-white.png');
 
 /* MEDIA QUERIES */

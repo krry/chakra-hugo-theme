@@ -58,7 +58,9 @@ domready(function () {
 
     // when the dom is loaded, fade in the page
     document.body.classList.remove('dom-loading');
+  setTimeout(function (){
     document.documentElement.style.backgroundColor="";
+  }, 500)
 
     var scrollPercent,
         scrollPosition,

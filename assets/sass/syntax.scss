@@ -6,15 +6,18 @@ samp {
 }
 
 pre.chroma {
-    background-color: hsl(180, 64%, 4%);
+    background-color: $black;
 
-    .c, .c1, .cm {
-        color: hsl(110, 25%, 50%);
+    .c,
+    .c1,
+    .cm {
+        color: $gray-light;
     }
 }
 
+h4 > code,
 p > code {
-    background-color: hsl(110, 20%, 95%);
+    background-color: $extra-white;
     padding: 0.125em 0.25em;
     margin: 0 0.125em;
     font-size: 1.25em;
@@ -44,5 +47,3 @@ p > code {
         margin: auto;
     }
 }
-
-.high
