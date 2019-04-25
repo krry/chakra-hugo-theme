@@ -1,9 +1,10 @@
 <link href="//gmpg.org/xfn/11" rel="profile" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+<meta name="theme-color" content="{{ .Site.Params.colors.base }}" />
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
 {{ if .IsHome -}}
-<title>{{ .Site.Title}}</title>
+<title>{{ .Site.Title }}</title>
 {{- else -}}
 <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
 {{- end }}

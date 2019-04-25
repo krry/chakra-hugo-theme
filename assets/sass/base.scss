@@ -51,8 +51,16 @@ p {
 
 img {
     max-width: 100%;
-    max-height: 50vh;
+    display: block;
+    margin: auto;
 }
+
+@media #{$tablet} {
+    p > img {
+        max-height: 50vh;
+    }
+}
+
 
 blockquote {
     position: relative;
