@@ -8,7 +8,11 @@
   <ul class="list-taxonomies">
     {{ range .Data.Pages -}}
     <li>
-      <span><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+      {{- if .Params.name -}}
+      <span><a href="{{ .Permalink }}">{{ humanize .Params.name }}</a></span>
+      {{- else if .Title -}}
+      <span><a href="{{ .Permalink }}">{{ humanize .Title }}</a></span>
+      {{- end -}}
     </li>
     {{- end -}}
   </ul>
