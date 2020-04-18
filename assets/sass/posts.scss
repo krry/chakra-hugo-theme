@@ -17,7 +17,7 @@
         padding: 0.25rem 0;
     }
 
-    .post-date + .list-tags {
+    .post-date + .list-taxonomies {
         flex: 4;
         order: 2;
         text-align: right;
@@ -57,8 +57,7 @@
 }
 
 .post,
-.search,
-.tag {
+.taxonomy {
     position: relative;
     min-height: 100vh;
     margin: 2em 0;
@@ -93,8 +92,8 @@
     }
 
     .post-title,
-    .tag-title,
-    .tag-subtitle,
+    .taxonomy-title,
+    .taxonomy-subtitle,
     .post-lead,
     .post-subtitle {
         line-height: 1.15;
@@ -121,10 +120,6 @@
         color: $color-muted;
         font-size: 0.75em;
     }
-}
-
-.search {
-    background: none;
 }
 
 .post-summary {

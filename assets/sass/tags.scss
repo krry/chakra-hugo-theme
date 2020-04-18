@@ -1,9 +1,9 @@
-.tag-term a::before {
+.taxonomy-term a::before {
     content: "#";
     font-size: 87.5%;
 }
 
-.tag-term a {
+.taxonomy-term a {
     color: $color-muted;
     text-decoration: none;
     text-transform: uppercase;
@@ -12,7 +12,7 @@
 }
 
 aside {
-    .list-inline .tag-term {
+    .list-inline .taxonomy-term {
         margin-right: 0;
 
         a {

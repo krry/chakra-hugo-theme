@@ -3,13 +3,14 @@
 {{- end -}}
 
 {{- define "main" -}}
-<h1>{{ .Title }}</h1>
-<ul class="list-tags">
-  {{ range .Data.Pages -}}
-  <li>
-    <span><a href="{{ .Permalink }}">{{ .Title }}</a></span>
-    {{ partial "tags/sources.html" . }}
-  </li>
-  {{- end -}}
-</ul>
+<div class="taxonomy">
+  <h1>{{ .Title }}</h1>
+  <ul class="list-taxonomies">
+    {{ range .Data.Pages -}}
+    <li>
+      <span><a href="{{ .Permalink }}">{{ .Title }}</a></span>
+    </li>
+    {{- end -}}
+  </ul>
+</div>
 {{- end }}
