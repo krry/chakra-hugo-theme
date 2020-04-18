@@ -1,4 +1,4 @@
-{{ with .Params.tags }}>>
+{{ with .Params.tags }}
 <ul class="list-inline list-reset list-taxonomies">
   {{ range $tag := . }}
   {{ with $.Site.GetPage (printf "/tags/%s" $tag) -}}

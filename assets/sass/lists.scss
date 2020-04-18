@@ -5,10 +5,27 @@
     list-style: none;
 }
 
+ul {
+    li {
+        list-style-type: none;
+    }
+
+    li::before {
+        content: '\2619';
+        margin-left: -1em;
+        margin-right: 0.5em;
+    }
+}
+
 .list-inline {
     li {
         display: inline-block;
         margin-right: 0.5rem;
+    }
+
+    li::before {
+        content: '';
+        margin: 0;
     }
 }
 

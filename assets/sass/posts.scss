@@ -1,27 +1,5 @@
-@media #{$desktop} {
-    .byline {
-        display: flex;
-        margin: 1rem 0;
-        align-items: baseline;
-    }
-
-    .byline > * {
-        display: flex;
-        flex: 1;
-        justify-content: flex-end;
-    }
-
-    .post-date {
-        order: 1;
-        color: $color-muted;
-        padding: 0.25rem 0;
-    }
-
-    .post-date + .list-taxonomies {
-        flex: 4;
-        order: 2;
-        text-align: right;
-    }
+.byline {
+    font-size: 0.75em;
 }
 
 .read-more {
@@ -111,14 +89,10 @@
         font-weight: lighter;
     }
 
-    // h3.post-subtitle {
-    //     font-family: $font-title;
-    // }
-
     .post-date {
         display: block;
         color: $color-muted;
-        font-size: 0.75em;
+        margin: 0 0 0.5rem;
     }
 }
 
