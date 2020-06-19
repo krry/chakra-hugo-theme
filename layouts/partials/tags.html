@@ -2,7 +2,7 @@
 <ul class="list-inline list-reset list-taxonomies">
   {{ range $tag := . }}
   {{ with $.Site.GetPage (printf "/tags/%s" $tag) -}}
-  <li class="tag-term">
+  <li class="taxonomy-term">
     <a href="{{ .RelPermalink }}">{{ $tag | urlize }}</a>
   </li>
   {{- end -}}
