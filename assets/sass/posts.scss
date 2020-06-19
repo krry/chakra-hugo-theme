@@ -44,7 +44,7 @@
     border-radius: $curvature;
 
     @media #{$tablet} {
-        margin: 0;
+        margin: 0 2em 2em 0;
         padding: 2em;
         border-radius: 0 $curvature $curvature 0;
     }

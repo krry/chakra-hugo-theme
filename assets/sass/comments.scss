@@ -7,6 +7,12 @@
     }
 }
 
+@media #{$tablet} {
+    .post.comments {
+        margin-bottom: 4rem;
+    }
+}
+
 // div that wraps the iframe
 // .utterances {}
 
