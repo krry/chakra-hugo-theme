@@ -2,6 +2,7 @@ body {
     background: transparent;
 }
 
+/* TODO: cache background image for session rather than reloading a new one */
 .wallpaper {
     background-position: center center;
     background-size: cover;

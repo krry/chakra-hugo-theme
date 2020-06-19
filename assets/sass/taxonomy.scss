@@ -1,6 +1,5 @@
-.taxonomy-term a::before {
-    content: "#";
-    font-size: 87.5%;
+.taxonomy-term {
+    font-size: 75%;
 }
 
 .taxonomy-term a {
@@ -8,10 +7,18 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: lighter;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    transition: all 250ms;
+
+    &:hover {
+        background-color: transparentize($color-muted, 0.8);
+    }
 }
 
-.taxonomy-term {
-    font-size: 75%;
+.taxonomy-term a::before {
+    content: "#";
+    font-size: 87.5%;
 }
 
 .profile-pic {
@@ -20,7 +27,7 @@
     padding: 3px;
     border-radius: 1em;
     background: $color-cadet;
-    box-shadow: inset 0 0em 1em 1em transparentize($black, 0.5);
+    box-shadow: inset 0 0 1em 1em transparentize($black, 0.5);
 }
 
 aside {
@@ -29,8 +36,10 @@ aside {
 
         a {
             color: $white;
-            padding: 0.25em 0.5em;
-            border-radius: 0.25em;
+
+            &:hover {
+                background-color: transparentize($white, 0.8);
+            }
         }
     }
 }

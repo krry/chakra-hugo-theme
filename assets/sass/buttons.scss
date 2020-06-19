@@ -33,3 +33,40 @@ body:not(.user-is-tabbing) select:focus,
 body:not(.user-is-tabbing) textarea:focus {
     outline: none;
 }
+
+.btn {
+    border: 2px solid $color-dank;
+    background-color: $color-teal;
+    color: $extra-white;
+    height: 2.25em;
+    line-height: 2.25em;
+    padding: 0 1.25em;
+    border-radius: 0.25em;
+    font-size: 0.875rem;
+    transition: all 250ms;
+}
+
+.btn.center {
+    margin: 0.5rem auto;
+    display: block;
+}
+
+.btn.outline {
+    border: 2px solid $color-dank;
+
+    &:hover {
+        border-color: $color-teal;
+    }
+}
+
+.btn.clear {
+    color: $color-link;
+    border: 1px solid $color-link;
+    border: none;
+    background-color: transparent;
+    font-size: 0.75rem;
+
+    &:hover {
+        background-color: transparentize($color-link, 0.85);
+    }
+}

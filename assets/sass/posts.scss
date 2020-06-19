@@ -11,6 +11,15 @@
     }
 }
 
+.read-on {
+    display: block;
+    text-align: center;
+}
+
+.post-summary .list-taxonomies {
+    text-align: center;
+}
+
 .scrolliner {
     position: sticky;
     top: 0;
@@ -38,10 +47,10 @@
 .taxonomy {
     position: relative;
     min-height: 100vh;
-    margin: 2em 0;
-    padding: 3em 2em;
+    margin: 1.325em 0.625rem;
+    padding: 1.25rem 1.25em;
     background-color: $white;
-    border-radius: $curvature;
+    border-radius: 1.25em;
 
     @media #{$tablet} {
         margin: 0 2em 2em 0;
@@ -98,10 +107,10 @@
 
 .post-summary {
     position: relative;
-    margin-bottom: 2em;
-    padding: 2em;
+    margin: 0.625em;
+    padding: 1.25em 1.25em;
     background-color: $white;
-    border-radius: $curvature;
+    border-radius: 1.25em;
     opacity: 0.9;
     transition: all 250ms ease-out;
 
@@ -110,7 +119,15 @@
         opacity: 1;
     }
 
+    &:first-child {
+        margin-top: 1.325em;
+    }
+
     @media #{$tablet} {
+        margin: 0 1.5em 1.5em;
+    }
+
+    @media #{$desktop} {
         margin: 0 2em 2em;
     }
 }
