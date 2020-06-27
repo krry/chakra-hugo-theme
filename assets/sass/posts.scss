@@ -5,15 +5,11 @@
 .read-more {
     color: inherit;
     text-decoration: none;
+    display: block;
 
     &:visited {
         opacity: 0.8;
     }
-}
-
-.read-on {
-    display: block;
-    text-align: center;
 }
 
 .post-summary .list-taxonomies {
@@ -117,6 +113,10 @@
     &:hover {
         border-color: $color-done;
         opacity: 1;
+
+        .read-on {
+            font-weight: bolder;
+        }
     }
 
     &:first-child {
@@ -125,6 +125,14 @@
 
     @media #{$tablet} {
         margin: 0 1.5em 1.5em;
+
+        &:hover:nth-of-type(2n-1) {
+            transform: translateX(1rem);
+        }
+
+        &:hover:nth-of-type(2n) {
+            transform: translateX(-1rem);
+        }
     }
 
     @media #{$desktop} {
