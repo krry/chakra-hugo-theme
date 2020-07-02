@@ -39,14 +39,15 @@ $color-comments-header: $color-title;
 $color-comments-border: $teal-dark;
 
 /* FONTS
- * base: Lato, sans-serif
+ * base: Open Sans, sans-serif
  * text: Aleo, serif
- * title: Righteous, sans-serif
+ * title: Righteous, cursive
+ * code: Inconsolata, monospace
  * */
 
-$font-base: "Lato", system-ui;
+$font-base: "Open Sans", system-ui, sans-serif;
 $font-text: "Aleo", serif;
-$font-title: "Righteous", sans-serif;
+$font-title: "Righteous", cursive;
 $font-code: "Inconsolata", monospace;
 
 /* IMGS */
