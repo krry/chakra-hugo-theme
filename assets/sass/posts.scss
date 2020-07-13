@@ -108,7 +108,7 @@
     background-color: $white;
     border-radius: 1.25em;
     opacity: 0.9;
-    transition: all 250ms ease-out;
+    transition: all 100ms ease-out;
 
     &:hover {
         border-color: $color-done;
@@ -126,12 +126,8 @@
     @media #{$tablet} {
         margin: 0 1.5em 1.5em;
 
-        &:hover:nth-of-type(2n-1) {
-            transform: translateX(1rem);
-        }
-
-        &:hover:nth-of-type(2n) {
-            transform: translateX(-1rem);
+        &:hover {
+            transform: translate3d(-0.25rem, 0, 0) scale(1.02);
         }
     }
 

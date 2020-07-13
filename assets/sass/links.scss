@@ -1,15 +1,43 @@
 a {
-    color: $color-link;
-    outline: $color-link;
+  color: $color-link;
+
+  &:focus {
+    outline-color: $color-link;
+    outline-style: dashed;
+  }
+
+  &:link {
+    color: $color-levi;
+
+    &:hover {
+      color: $color-peri;
+    }
+  }
+
+  &:visited {
+    color: $violet;
+
+    &:hover {
+      color: $mauve;
+    }
+  }
+
+  &:active {
+    color: $color-vermillion;
+
+    &:hover {
+      color: $color-salmon;
+    }
+  }
 }
 
 .inverse a {
-    text-decoration: none;
-    font-weight: bolder;
-    opacity: 0.8;
-    transition: all 250ms ease;
+  text-decoration: none;
+  font-weight: bolder;
+  opacity: 0.8;
+  transition: all 250ms ease;
 
-    &:hover {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 }
