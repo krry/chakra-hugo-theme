@@ -1,111 +1,94 @@
 html {
-    box-sizing: border-box;
-    font-family: $font-base;
+  box-sizing: border-box;
+  font-family: $font-base;
 }
 
 body {
-    color: $color-text;
-    background-color: $color-bg;
-    margin: 0;
-    transition: opacity 1s ease;
+  color: $color-text;
+  background-color: $color-bg;
+  margin: 0;
+  transition: opacity 1s ease;
 }
 
 .dom-loading {
-    opacity: 0;
+  opacity: 0;
 }
 
 @media #{$desktop} {
-    html {
-        font-size: 125%;
-    }
+  html {
+    font-size: 125%;
+  }
 }
 
 ::placeholder {
-    color: $gray-light;
+  color: $gray-light;
 }
 
 ::selection {
-    background-color: $orchid;
-    color: $extra-white;
+  background-color: $orchid;
+  color: $extra-white;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
-}
-
-a {
-    color: $color-link;
+  box-sizing: inherit;
 }
 
 h1,
 h2 {
-    font-family: $font-title;
-    color: $color-title;
+  font-family: $font-title;
+  color: $color-title;
 }
 
 p {
-    line-height: 1.375;
+  line-height: 1.375;
 }
 
 img {
-    max-width: 100%;
-    display: block;
-    margin: auto;
+  max-width: 100%;
+  display: block;
+  margin: auto;
 }
 
 @media #{$tablet} {
-    p > img {
-        max-height: 50vh;
-    }
+  p > img {
+    max-height: 50vh;
+  }
 }
 
-
 blockquote {
-    position: relative;
-    font-style: italic;
+  position: relative;
+  font-style: italic;
 }
 
 blockquote::before {
-    position: absolute;
-    left: -0.5em;
-    top: -0.325em;
-    content: "❝";
-    font-size: 4em;
-    color: hsla(0, 0%, 50%, 0.5);
+  position: absolute;
+  left: -0.5em;
+  top: -0.325em;
+  content: "❝";
+  font-size: 4em;
+  color: hsla(0, 0%, 50%, 0.5);
 }
 
 blockquote cite {
-    text-align: right;
-    display: block;
-    font-style: normal;
-}
-
-.post,
-.post-summary {
-    p,
-    span,
-    ul,
-    ol,
-    dl,
-    blockquote {
-        font-family: $font-text;
-    }
+  text-align: right;
+  display: block;
+  font-style: normal;
 }
 
 hr {
-    width: 87%;
-    opacity: 0.5;
+  width: 87%;
+  opacity: 0.5;
 }
 
 figcaption {
-    font-size: 75%;
-    font-weight: 600;
-    text-align: center;
+  font-size: 75%;
+  font-weight: 600;
+  text-align: center;
 }
 
 :focus {
-    outline-color: $color-link;
-    outline-style: dashed;
+  outline-color: $color-link;
+  outline-style: dashed;
 }

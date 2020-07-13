@@ -1,5 +1,22 @@
+.post,
+.post-summary {
+  p,
+  blockquote {
+    font-family: $font-text;
+  }
+}
+
 .byline {
     font-size: 0.75em;
+}
+
+a.read-more,
+a.read-more:hover
+a.read-more:visited,
+a.read-more:visited:hover,
+a.read-more:active,
+a.read-more:active:hover {
+  color: $color-text;
 }
 
 .read-more {
