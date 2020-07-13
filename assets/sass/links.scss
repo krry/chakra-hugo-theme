@@ -12,21 +12,21 @@ a {
     &:hover {
       color: $color-peri;
     }
-  }
 
-  &:visited {
-    color: $violet;
+    &:visited {
+      color: $violet;
 
-    &:hover {
-      color: $mauve;
+      &:hover {
+        color: $mauve;
+      }
     }
-  }
 
-  &:active {
-    color: $color-vermillion;
+    &:active {
+      color: $color-vermillion;
 
-    &:hover {
-      color: $color-salmon;
+      &:hover {
+        color: $color-salmon;
+      }
     }
   }
 }
