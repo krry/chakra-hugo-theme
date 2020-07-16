@@ -11,16 +11,15 @@
 }
 
 a.read-more,
-a.read-more:hover
-a.read-more:visited,
-a.read-more:visited:hover,
-a.read-more:active,
-a.read-more:active:hover {
+a.read-more:link:hover
+a.read-more:link:visited,
+a.read-more:link:visited:hover,
+a.read-more:link:active,
+a.read-more:link:active:hover {
   color: $color-text;
 }
 
 .read-more {
-    color: inherit;
     text-decoration: none;
     display: block;
 
