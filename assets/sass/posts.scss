@@ -7,147 +7,142 @@
 }
 
 .byline {
-    font-size: 0.75em;
+  font-size: 0.75em;
 }
 
 a.read-more,
-a.read-more:link:hover
-a.read-more:link:visited,
-a.read-more:link:visited:hover,
-a.read-more:link:active,
-a.read-more:link:active:hover {
+a.read-more:visited,
+a.read-more:hover
+a.read-more:active {
   color: $color-text;
+  text-decoration: none;
+  display: block;
 }
 
-.read-more {
-    text-decoration: none;
-    display: block;
-
-    &:visited {
-        opacity: 0.8;
-    }
+a.read-more:visited {
+  opacity: 0.8;
 }
 
 .post-summary .list-taxonomies {
-    text-align: center;
+  text-align: center;
 }
 
 .scrolliner {
-    position: sticky;
-    top: 0;
-    height: 6px;
-    transition: opacity 400ms;
-    width: calc(100% + 8em);
-    transform: translate3d(calc(-100% - 4em), 0, 0);
-    background-color: $color-title;
+  position: sticky;
+  top: 0;
+  height: 6px;
+  transition: opacity 400ms;
+  width: calc(100% + 8em);
+  transform: translate3d(calc(-100% - 4em), 0, 0);
+  background-color: $color-title;
 
-    &::after {
-        content: "";
-        height: 3px;
-        display: block;
-        width: 100%;
-        background-color: $color-highlight;
-    }
+  &::after {
+    content: "";
+    height: 3px;
+    display: block;
+    width: 100%;
+    background-color: $color-highlight;
+  }
 
-    &.ghost {
-        opacity: 0;
-        transition: none;
-    }
+  &.ghost {
+    opacity: 0;
+    transition: none;
+  }
 }
 
 .post,
 .taxonomy {
-    position: relative;
-    min-height: 100vh;
-    margin: 1.325em 0.625rem;
-    padding: 1.25rem 1.25em;
-    background-color: $white;
-    border-radius: 1.25em;
+  position: relative;
+  min-height: 100vh;
+  margin: 1.325em 0.625rem;
+  padding: 1.25rem 1.25em;
+  background-color: $white;
+  border-radius: 1.25em;
 
-    @media #{$tablet} {
-        margin: 0 2em 2em 0;
-        padding: 2em;
-        border-radius: 0 $curvature $curvature 0;
-    }
+  @media #{$tablet} {
+    margin: 0 2em 2em 0;
+    padding: 2em;
+    border-radius: 0 $curvature $curvature 0;
+  }
 
-    @media #{$desktop} {
-        padding: 3em;
-    }
+  @media #{$desktop} {
+    padding: 3em;
+  }
 
-    h2 {
-        font-family: $font-title;
-    }
+  h2 {
+    font-family: $font-title;
+  }
 
-    p {
-        line-height: 1.375;
-        max-width: 80ch;
-    }
+  p {
+    line-height: 1.375;
+    max-width: 80ch;
+  }
 
-    ul,
-    ol {
-        li {
-            line-height: 1.5;
-        }
+  ul,
+  ol {
+    li {
+      line-height: 1.5;
     }
+  }
 
-    .post-title,
-    .taxonomy-title,
-    .taxonomy-subtitle,
-    .post-lead,
-    .post-subtitle {
-        line-height: 1.15;
-        margin: 0.5rem 0;
-    }
+  .post-title,
+  .taxonomy-title,
+  .taxonomy-subtitle,
+  .post-lead,
+  .post-subtitle {
+    line-height: 1.15;
+    margin: 0.5rem 0;
+  }
 
-    h4.post-lead,
-    h3.post-subtitle {
-        color: $color-muted;
-    }
+  h4.post-lead,
+  h3.post-subtitle {
+    color: $color-muted;
+  }
 
-    h4.post-lead {
-        font-family: $font-base;
-        font-style: italic;
-        font-weight: lighter;
-    }
+  h4.post-lead {
+    font-family: $font-base;
+    font-style: italic;
+    font-weight: lighter;
+  }
 
-    .post-date {
-        display: block;
-        color: $color-muted;
-        margin: 0 0 0.5rem;
-    }
+  .post-date {
+    display: block;
+    color: $color-muted;
+    margin: 0 0 0.5rem;
+  }
 }
 
 .post-summary {
-    position: relative;
-    margin: 0.625em;
-    padding: 1.25em 1.25em;
-    background-color: $white;
-    border-radius: 1.25em;
-    opacity: 0.9;
-    transition: all 100ms ease-out;
+  position: relative;
+  margin: 0.625em;
+  padding: 1.25em 1.25em;
+  background-color: $white;
+  border-radius: 1.25em;
+  opacity: 0.9;
+  transition: all 100ms ease-out;
+
+  &:hover {
+    border-color: $color-done;
+    opacity: 1;
+
+    .read-on {
+      font-weight: bolder;
+    }
+  }
+
+  &:first-child {
+    margin-top: 1.325em;
+  }
+
+  @media #{$tablet} {
+    margin: 0 1.5em 1.5em;
 
     &:hover {
-        border-color: $color-done;
-        opacity: 1;
-
-        .read-on {
-            font-weight: bolder;
-        }
+      transform: translate3d(-0.25rem, 0, 0) scale(1.02);
     }
+  }
 
-    &:first-child {
-        margin-top: 1.325em;
-    }
-
-    @media #{$tablet} {
-        margin: 0 1.5em 1.5em;
-
-        &:hover {
-            transform: translate3d(-0.25rem, 0, 0) scale(1.02);
-        }
-    }
-
-    @media #{$desktop} {
-        margin: 0 2em 2em;
-    }
+  @media #{$desktop} {
+    margin: 0 2em 2em;
+  }
 }

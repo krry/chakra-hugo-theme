@@ -1,46 +1,54 @@
 .taxonomy-term {
-    font-size: 75%;
+  font-size: 75%;
 }
 
 .taxonomy-term a {
-    color: $color-muted;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: $font-base;
-    font-weight: lighter;
-    padding: 0.25em 0.5em;
-    border-radius: 0.25em;
-    transition: all 250ms;
+  color: $color-muted;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $font-base;
+  font-weight: lighter;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  transition: all 250ms;
 
-    &:hover {
-        background-color: transparentize($color-muted, 0.8);
-    }
+  &:hover {
+    background-color: transparentize($color-muted, 0.8);
+  }
 }
 
 .taxonomy-term a::before {
-    content: "#";
-    font-size: 87.5%;
+  content: "#";
+  font-size: 87.5%;
 }
 
 .profile-pic {
-    max-height: 240px;
-    border: 3px solid $color-dank;
-    padding: 3px;
-    border-radius: 1em;
-    background: $color-cadet;
-    box-shadow: inset 0 0 1em 1em transparentize($black, 0.5);
+  max-height: 240px;
+  border: 3px solid $color-dank;
+  padding: 3px;
+  border-radius: 1em;
+  background: $color-cadet;
+  box-shadow: inset 0 0 1em 0.25em transparentize($black, 0.5);
 }
 
-aside {
-    .list-inline .taxonomy-term {
-        margin-right: 0;
+.sidebar {
+  .list-inline .taxonomy-term {
+    margin-right: 0;
+  }
 
-        a {
-            color: $white;
+  a:link {
+    color: $white;
+  }
 
-            &:hover {
-                background-color: transparentize($white, 0.8);
-            }
-        }
-    }
+  a:visited {
+    background-color: darken($white, 0.2);
+  }
+
+  a:hover {
+    background-color: transparentize($white, 0.8);
+  }
+
+  a:active {
+    background-color: $white;
+  }
 }

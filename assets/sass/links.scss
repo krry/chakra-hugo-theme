@@ -1,37 +1,29 @@
-a {
+a:link {
   color: $color-link;
-
-  &:focus {
-    outline-color: $color-link;
-    outline-style: dashed;
-  }
-
-  &:link {
-    color: $color-levi;
-
-    &:hover {
-      color: $color-peri;
-    }
-
-    &:visited {
-      color: $violet;
-
-      &:hover {
-        color: $mauve;
-      }
-    }
-
-    &:active {
-      color: $color-vermillion;
-
-      &:hover {
-        color: $color-salmon;
-      }
-    }
-  }
 }
 
-.inverse a {
+a:visited {
+  color: $violet;
+}
+
+a:link:hover {
+  color: $color-peri;
+}
+
+a:visited:hover {
+  color: $mauve;
+}
+
+a:link:active {
+  color: $color-vermillion;
+}
+
+a:visited:active {
+  color: $color-salmon;
+}
+
+.sidebar a {
+
   text-decoration: none;
   font-weight: bolder;
   opacity: 0.8;
