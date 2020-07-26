@@ -10,9 +10,8 @@
   font-size: 0.75em;
 }
 
-a.read-more,
+a.read-more:link
 a.read-more:visited,
-a.read-more:hover
 a.read-more:active {
   color: $color-text;
   text-decoration: none;
@@ -21,6 +20,11 @@ a.read-more:active {
 
 a.read-more:visited {
   opacity: 0.8;
+}
+
+a.read-more:link:hover,
+a.read-more:visited:hover {
+  color: $color-peri;
 }
 
 .post-summary .list-taxonomies {

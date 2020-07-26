@@ -2,19 +2,19 @@ a:link {
   color: $color-link;
 }
 
-a:visited {
-  color: $violet;
-}
-
 a:link:hover {
   color: $color-peri;
+}
+
+a:visited {
+  color: $violet;
 }
 
 a:visited:hover {
   color: $mauve;
 }
 
-a:link:active {
+a:active {
   color: $color-vermillion;
 }
 
@@ -23,7 +23,6 @@ a:visited:active {
 }
 
 .sidebar a {
-
   text-decoration: none;
   font-weight: bolder;
   opacity: 0.8;
