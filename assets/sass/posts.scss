@@ -30,12 +30,15 @@
 .read-more,
 .read-more:hover {
   p,
-  time,
   h3,
   ul,
   li {
     color: $color-text;
     text-decoration: none;
+  }
+
+  time {
+    color: $color-muted;
   }
 
   ul {
@@ -115,12 +118,17 @@
   .post-lead,
   .post-subtitle {
     color: $color-muted;
+    font-weight: 400;
   }
-
+  
   .post-lead {
     font-family: $font-base;
+    font-size: 0.875em;
     font-style: italic;
-    font-weight: lighter;
+  }
+  
+  .post-subtitle {
+    font-size: 1rem;
   }
 
   .post-date {
