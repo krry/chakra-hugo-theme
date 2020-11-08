@@ -1,3 +1,13 @@
+const showSearchHotkeyForOS = (os) => {
+    // show the appropriate hotkey hint
+    if (os.includes("Mac")) {
+        document.getElementById("modkey").innerHTML = "⌘"
+    } else if (os.includes("Win") || os.includes("Linux")) {
+        document.getElementById("modkey").innerHTML = "^"
+    } else {
+        document.getElementById("search_hint").style.display = "none"
+    }
+  }
 /*!
  * domready (c) Dustin Diaz 2014 - License MIT
  * https://github.com/ded/domready
@@ -41,8 +51,8 @@
 
 
 domready(function () {
-    console.info('DOM is content and loaded.');
-
+    // console.info('DOM is content and loaded.');
+    showSearchHotkeyForOS(window.navigator.platform);
     // wire up the menu trigger button
     document.querySelector('#menu_trigger').addEventListener('click', function(){
         this.classList.toggle('triggered');
