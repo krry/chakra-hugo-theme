@@ -10,21 +10,37 @@
   font-size: 0.75em;
 }
 
-a.read-more:link
-a.read-more:visited,
-a.read-more:active {
+.read-more:link,
+.read-more:visited,
+.read-more:active {
   color: $color-text;
-  text-decoration: none;
   display: block;
+  text-decoration: none;
 }
 
-a.read-more:visited {
+.read-more:visited {
   opacity: 0.8;
 }
 
-a.read-more:link:hover,
-a.read-more:visited:hover {
+.read-more:link:hover,
+.read-more:visited:hover {
   color: $color-peri;
+}
+
+.read-more,
+.read-more:hover {
+  p,
+  time,
+  h3,
+  ul,
+  li {
+    color: $color-text;
+    text-decoration: none;
+  }
+
+  ul {
+    font-size: 0.875rem;
+  }
 }
 
 .post-summary .list-taxonomies {
@@ -32,20 +48,20 @@ a.read-more:visited:hover {
 }
 
 .scrolliner {
+  background-color: $color-title;
+  height: 6px;
   position: sticky;
   top: 0;
-  height: 6px;
+  transform: translate3d(calc(-100% - 4em), 0, 0);
   transition: opacity 400ms;
   width: calc(100% + 8em);
-  transform: translate3d(calc(-100% - 4em), 0, 0);
-  background-color: $color-title;
 
   &::after {
-    content: "";
-    height: 3px;
-    display: block;
-    width: 100%;
     background-color: $color-highlight;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
   }
 
   &.ghost {
@@ -56,17 +72,17 @@ a.read-more:visited:hover {
 
 .post,
 .taxonomy {
-  position: relative;
-  min-height: 100vh;
-  margin: 1.325em 0.625rem;
-  padding: 1.25rem 1.25em;
   background-color: $white;
   border-radius: 1.25em;
+  margin: 1.325em 0.625rem;
+  min-height: 100vh;
+  padding: 1.25rem 1.25em;
+  position: relative;
 
   @media #{$tablet} {
+    border-radius: 0 $curvature $curvature 0;
     margin: 0 2em 2em 0;
     padding: 2em;
-    border-radius: 0 $curvature $curvature 0;
   }
 
   @media #{$desktop} {
@@ -82,11 +98,9 @@ a.read-more:visited:hover {
     max-width: 80ch;
   }
 
-  ul,
-  ol {
-    li {
-      line-height: 1.5;
-    }
+  ul li,
+  ol li {
+    line-height: 1.5;
   }
 
   .post-title,
@@ -98,31 +112,31 @@ a.read-more:visited:hover {
     margin: 0.5rem 0;
   }
 
-  h4.post-lead,
-  h3.post-subtitle {
+  .post-lead,
+  .post-subtitle {
     color: $color-muted;
   }
 
-  h4.post-lead {
+  .post-lead {
     font-family: $font-base;
     font-style: italic;
     font-weight: lighter;
   }
 
   .post-date {
-    display: block;
     color: $color-muted;
+    display: block;
     margin: 0 0 0.5rem;
   }
 }
 
 .post-summary {
-  position: relative;
-  margin: 0.625em;
-  padding: 1.25em 1.25em;
   background-color: $white;
   border-radius: 1.25em;
+  margin: 0.625em;
   opacity: 0.9;
+  padding: 1.25em;
+  position: relative;
   transition: all 100ms ease-out;
 
   &:hover {
@@ -142,7 +156,7 @@ a.read-more:visited:hover {
     margin: 0 1.5em 1.5em;
 
     &:hover {
-      transform: translate3d(-0.25rem, 0, 0) scale(1.02);
+      transform: translate3d(-0.125rem, 0, 0) scale(1.01);
     }
   }
 

@@ -1,49 +1,49 @@
 pre,
 code,
 samp {
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
-pre.chroma {
-    background-color: $black;
+.chroma {
+  background-color: $black;
 
-    .c,
-    .c1,
-    .cm {
-        color: $gray-light;
-    }
+  .c,
+  .c1,
+  .cm {
+    color: $gray-light;
+  }
 }
 
 h4 > code,
 p > code {
-    background-color: $extra-white;
-    padding: 0 0.25em;
-    margin: 0 0.125em;
-    font-size: 1.25em;
+  background-color: $extra-white;
+  font-size: 1.25em;
+  margin: 0 0.125em;
+  padding: 0 0.25em;
 }
 
 .highlight {
-    @media #{$phone} {
-        margin: 0.5rem -2em;
-
-        pre {
-            padding: 1em 2.5em;
-        }
-    }
-
-    p,
-    span,
-    ul,
-    ol,
-    dl {
-        font-family: $font-code;
-    }
+  @media #{$phone} {
+    margin: 0.5rem -2em;
 
     pre {
-        padding: 1rem;
-        max-width: 80ch;
-        font-size: 1.25em;
-        margin: auto;
+      padding: 1em 2.5em;
     }
+  }
+
+  p,
+  span,
+  ul,
+  ol,
+  dl {
+    font-family: $font-code;
+  }
+
+  pre {
+    font-size: 1.25em;
+    margin: auto;
+    max-width: 80ch;
+    padding: 1rem;
+  }
 }

@@ -14,7 +14,7 @@
         "browserslist": "^4.4.1"
     },
     "devDependencies": {
-        "stylelint": "^9.10.1",
-        "stylelint-config-standard": "^18.2.0"
+        "stylelint": "^13.7.2",
+        "stylelint-config-sass-guidelines": "^7.1.0"
     }
 }

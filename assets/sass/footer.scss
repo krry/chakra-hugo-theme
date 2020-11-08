@@ -1,24 +1,24 @@
 footer p {
-    font-size: 75%;
-    opacity: 0.75;
-    line-height: 1.25rem;
+  font-size: 75%;
+  line-height: 1.25rem;
+  opacity: 0.75;
 }
 
 footer a {
-    color: $white;
-    font-weight: lighter;
+  color: $white;
+  font-weight: lighter;
 }
 
 .crecom {
-    display: block;
-    margin-top: 4px;
+  display: block;
+  margin-top: 4px;
 }
 
 .copyleft {
-    display: inline-block;
-    text-align: right;
-    margin: 0;
-    padding-left: 0.125em;
-    transform: scaleX(-1);
-    filter: FlipH;
+  display: inline-block;
+  filter: FlipH;
+  margin: 0;
+  padding-left: 0.125em;
+  text-align: right;
+  transform: scaleX(-1);
 }

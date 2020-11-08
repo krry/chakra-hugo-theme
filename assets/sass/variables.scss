@@ -5,34 +5,34 @@ $curvature: 2em;
 
 /* COLOR PALETTE */
 
-$color-salmon:     hsl(340, 53%, 58%);
-$color-flesh:      hsl(340, 53%, 52%);
+$color-salmon: hsl(340, 53%, 58%);
+$color-flesh: hsl(340, 53%, 52%);
 $color-vermillion: hsl(9, 72%, 54%);
-$color-teal:       hsl(190, 96%, 33%);
-$color-dank:       hsl(206, 68%, 17%);
-$teal-dark:        hsl(205, 73%, 6%);
-$color-levi:       hsl(205, 93%, 39%);
-$color-cadet:      hsl(205, 87%, 30%);
-$color-peri:       hsl(205, 58%, 48%);
-$pastel-pink:      hsl(295, 51%, 75%);
-$mauve:            hsl(295, 32%, 48%);
-$violet:           hsl(295, 43%, 34%);
-$orchid:           hsl(295, 32%, 39%);
-$color-ink:        hsl(295, 33%, 19%);
-$white:            hsl(205, 23%, 84%);
-$extra-white:      hsl(205, 23%, 94%);
-$gray-light:       hsl(205, 13%, 48%);
-$gray:             hsl(205, 10%, 29%);
-$gray-dark:        hsl(205, 12%, 11%);
-$black:            hsl(225, 25%, 3%);
-$color-bg:         $white;
-$color-text:       $gray-dark;
-$color-link:       $color-levi;
-$color-title:      $color-dank;
-$color-highlight:  $color-peri;
-$color-muted:      $gray;
-$color-done:       $color-ink;
-$color-alert:      $color-vermillion;
+$color-teal: hsl(190, 96%, 33%);
+$color-dank: hsl(206, 68%, 17%);
+$teal-dark: hsl(205, 73%, 6%);
+$color-levi: hsl(205, 93%, 39%);
+$color-cadet: hsl(205, 87%, 30%);
+$color-peri: hsl(205, 58%, 48%);
+$pastel-pink: hsl(295, 51%, 75%);
+$mauve: hsl(295, 32%, 48%);
+$violet: hsl(295, 43%, 34%);
+$orchid: hsl(295, 32%, 39%);
+$color-ink: hsl(295, 33%, 19%);
+$white: hsl(205, 23%, 84%);
+$extra-white: hsl(205, 23%, 94%);
+$gray-light: hsl(205, 13%, 48%);
+$gray: hsl(205, 10%, 29%);
+$gray-dark: hsl(205, 12%, 11%);
+$black: hsl(225, 25%, 3%);
+$color-bg: $white;
+$color-text: $gray-dark;
+$color-link: $color-levi;
+$color-title: $color-dank;
+$color-highlight: $color-peri;
+$color-muted: $gray;
+$color-done: $color-ink;
+$color-alert: $color-vermillion;
 $color-comments-bg: $black;
 $color-comments-link: $color-link;
 $color-comments-header: $color-title;
@@ -45,17 +45,17 @@ $color-comments-border: $teal-dark;
  * code: Inconsolata, monospace
  * */
 
-$font-base: "Open Sans", system-ui, sans-serif;
-$font-text: "Aleo", "Georgia", serif;
-$font-title: "Righteous", "Futura", "Comic Sans MS", cursive;
-$font-code: "Inconsolata", monospace;
+$font-base: 'Open Sans', system-ui, sans-serif;
+$font-text: 'Aleo', 'Georgia', serif;
+$font-title: 'Righteous', 'Futura', 'Comic Sans MS', cursive;
+$font-code: 'Inconsolata', monospace;
 
 /* IMGS */
-$bg-img-phone: url("../img/splatter-back-phone.jpg");
-$bg-img-full: url("../img/splatter-back.jpg");
+$bg-img-phone: url('../img/splatter-back-phone.jpg');
+$bg-img-full: url('../img/splatter-back.jpg');
 $logo-white: url('../img/atmanaut-mono-white.png');
 
 /* MEDIA QUERIES */
-$phone: "only screen and (max-width: 684px)";
-$tablet: "only screen and (min-width: 684px)";
-$desktop: "only screen and (min-width: 900px)";
+$phone: 'only screen and (max-width: 684px)';
+$tablet: 'only screen and (min-width: 684px)';
+$desktop: 'only screen and (min-width: 900px)';

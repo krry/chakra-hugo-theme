@@ -23,9 +23,9 @@ a:visited:active {
 }
 
 .sidebar a {
-  text-decoration: none;
   font-weight: bolder;
   opacity: 0.8;
+  text-decoration: none;
   transition: all 250ms ease;
 
   &:hover {

@@ -1,37 +1,37 @@
 body {
-    background: transparent;
+  background: transparent;
 }
 
 /* TODO: cache background image for session rather than reloading a new one */
 .wallpaper {
-    background-position: center center;
-    background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
 
-    @media #{$phone} {
-        background-image: $bg-img-phone;
-        background-image: url("https://source.unsplash.com/collection/4311532");
-    }
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 
-    @media #{$tablet} {
-        background-image: $bg-img-full;
-        background-image: url("https://source.unsplash.com/collection/4311532");
-    }
+  @media #{$phone} {
+    background-image: $bg-img-phone;
+    background-image: url('https://source.unsplash.com/collection/4311532');
+  }
 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
+  @media #{$tablet} {
+    background-image: $bg-img-full;
+    background-image: url('https://source.unsplash.com/collection/4311532');
+  }
 }
 
 .wallpaper::before {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: hsla(205, 12%, 12%, 0.5);
-    content: "";
+  background-color: hsla(205, 12%, 12%, 0.5);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .wallpaper > * {
-    position: relative;
+  position: relative;
 }

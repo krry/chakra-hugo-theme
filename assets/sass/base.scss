@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  color: $color-text;
   background-color: $color-bg;
+  color: $color-text;
   margin: 0;
   transition: opacity 1s ease;
 }
@@ -37,8 +37,8 @@ body {
 
 h1,
 h2 {
-  font-family: $font-title;
   color: $color-title;
+  font-family: $font-title;
 }
 
 p {
@@ -46,9 +46,9 @@ p {
 }
 
 img {
-  max-width: 100%;
   display: block;
   margin: auto;
+  max-width: 100%;
 }
 
 @media #{$tablet} {
@@ -58,28 +58,28 @@ img {
 }
 
 blockquote {
-  position: relative;
   font-style: italic;
+  position: relative;
 }
 
 blockquote::before {
-  position: absolute;
-  left: -0.5em;
-  top: -0.325em;
-  content: "❝";
-  font-size: 4em;
   color: hsla(0, 0%, 50%, 0.5);
+  content: '❝';
+  font-size: 4em;
+  left: -0.5em;
+  position: absolute;
+  top: -0.325em;
 }
 
 blockquote cite {
-  text-align: right;
   display: block;
   font-style: normal;
+  text-align: right;
 }
 
 hr {
-  width: 87%;
   opacity: 0.5;
+  width: 87%;
 }
 
 figcaption {
@@ -91,4 +91,5 @@ figcaption {
 :focus {
   outline-color: $color-link;
   outline-style: dashed;
+  outline-width: 1px;
 }

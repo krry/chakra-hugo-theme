@@ -1,72 +1,72 @@
 .button-reset {
-    width: auto;
-    margin: 0;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  appearance: none;
+  background: transparent;
+  border: 0;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    border: 0;
     padding: 0;
-    background: transparent;
-    border: none;
-    overflow: visible;
-
-    /* inherit font & color from ancestor */
-    color: inherit;
-    font: inherit;
-
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: normal;
-
-    /* Corrects font smoothing for webkit */
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-
-    /* Corrects inability to style clickable `input` types in iOS */
-    -webkit-appearance: none;
-
-    /* Remove excess padding and border in Firefox 4+ */
-    &::-moz-focus-inner {
-        border: 0;
-        padding: 0;
-    }
+  }
 }
 
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,
 body:not(.user-is-tabbing) select:focus,
 body:not(.user-is-tabbing) textarea:focus {
-    outline: none;
+  outline: none;
 }
 
 .btn {
-    border: 2px solid $color-dank;
-    background-color: $color-teal;
-    color: $extra-white;
-    height: 2.25em;
-    line-height: 2.25em;
-    padding: 0 1.25em;
-    border-radius: 0.25em;
-    font-size: 0.875rem;
-    transition: all 250ms;
+  background-color: $color-teal;
+  border: 2px solid $color-dank;
+  border-radius: 0.25em;
+  color: $extra-white;
+  font-size: 0.875rem;
+  height: 2.25em;
+  line-height: 2.25em;
+  padding: 0 1.25em;
+  transition: all 250ms;
 }
 
 .btn.center {
-    margin: 0.5rem auto;
-    display: block;
+  display: block;
+  margin: 0.5rem auto;
 }
 
 .btn.outline {
-    border: 2px solid $color-dank;
+  border: 2px solid $color-dank;
 
-    &:hover {
-        border-color: $color-teal;
-    }
+  &:hover {
+    border-color: $color-teal;
+  }
 }
 
 .btn.clear {
-    color: $color-link;
-    border: 1px solid $color-link;
-    border: none;
-    background-color: transparent;
-    font-size: 0.75rem;
+  background-color: transparent;
+  border: 1px solid $color-link;
+  border: 0;
+  color: $color-link;
+  font-size: 0.75rem;
 
-    &:hover {
-        background-color: transparentize($color-link, 0.85);
-    }
+  &:hover {
+    background-color: transparentize($color-link, 0.85);
+  }
 }

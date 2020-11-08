@@ -5,22 +5,22 @@ body {
 .grid {
   display: grid;
   grid-template-rows: 100%;
-  overflow: hidden;
   height: 100%;
+  overflow: hidden;
   width: 100%;
 }
 
 .col {
   height: 100%;
-  width: 100%;
   overflow-y: scroll;
+  width: 100%;
 }
 
 .sidebar {
   background-color: hsla(205, 12%, 12%, 0.5);
   color: $white;
-  text-align: center;
   padding: 2rem 1rem;
+  text-align: center;
 }
 
 .sticky {
@@ -33,14 +33,14 @@ body {
   }
 
   .floaty {
-    position: fixed;
-    width: 100vw;
+    background: $black;
     height: 100vh;
     padding-top: 2em;
-    background: $black;
-    z-index: 9;
-    transition: all 750ms ease;
+    position: fixed;
     transform: translate3d(100%, 0, 0);
+    transition: all 750ms ease;
+    width: 100vw;
+    z-index: 9;
 
     &.shown {
       transform: translate3d(0, 0, 0);
@@ -61,7 +61,7 @@ body {
 
 @media #{$desktop} {
   .sidebar {
-    padding-right: 1.5rem;
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

@@ -1,44 +1,44 @@
 .list-reset {
-    font-family: $font-base;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  font-family: $font-base;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    li {
-        list-style-type: none;
-    }
+  li {
+    list-style-type: none;
+  }
 
-    li::before {
-        content: '\2619';
-        margin-left: -1em;
-        margin-right: 0.5em;
-    }
+  li::before {
+    content: '\2619';
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
 }
 
 .list-inline {
-    li {
-        display: inline-block;
-        margin-right: 0.5rem;
-    }
+  li {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
 
-    li::before {
-        content: '';
-        margin: 0;
-    }
+  li::before {
+    content: '';
+    margin: 0;
+  }
 }
 
 dt {
-    font-family: $font-base;
-    font-weight: bolder;
-    margin-bottom: 0.5em;
+  font-family: $font-base;
+  font-weight: bolder;
+  margin-bottom: 0.5em;
 }
 
 dd + dt {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 .list-sources {
-    font-family: $font-base;
+  font-family: $font-base;
 }
