@@ -10,6 +10,11 @@ body {
   width: 100%;
 }
 
+main {
+  overflow: hidden;
+  // TODO: figure out if this is necessary
+}
+
 .col {
   height: 100%;
   overflow-y: scroll;

@@ -5,7 +5,7 @@ const showSearchHotkeyForOS = (os) => {
     } else if (os.includes("Win") || os.includes("Linux")) {
         document.getElementById("modkey").innerHTML = "^"
     } else {
-        document.getElementById("search_hint").style.display = "none"
+        document.getElementById("searchHint").style.display = "none"
     }
   }
 /*!

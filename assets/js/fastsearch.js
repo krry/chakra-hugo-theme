@@ -1,52 +1,82 @@
 var fuse; // holds our search engine
 var searchVisible = false;
 var firstRun = true; // allow us to delay loading json data unless search activated
-var list = document.getElementById("searchResults"); // targets the <ul>
-var first = list.firstChild; // first child of search list
-var last = list.lastChild; // last child of search list
-var maininput = document.getElementById("searchInput"); // input box for search
 var resultsAvailable = false; // Did we get any search results?
-
+var searchResults = document.getElementById("searchResults"); // targets the <ul>
+var searchInput = document.getElementById("searchInput"); // input box for search
+var fastSearch = document.getElementById("fastSearch"); // input box for search
+var searchHint = document.getElementById("searchHint"); // input box for search
+var firstResult = searchResults.firstChild; // first child of search list
+var lastResult = searchResults.lastChild; // last child of search list
 
 function showSearch() {
-  document.getElementById("fastSearch").classList.add("shown"); // show search box
-  document.getElementById("searchInput").focus(); // put focus in input box so you can just start typing
+  fastSearch.classList.add("shown"); // show search box
+  searchInput.focus(); // put focus in input box so you can just start typing
   searchVisible = true; // search visible
-}
-function hideSearch() {
-  document.getElementById("fastSearch").classList.remove("shown"); // hide search box
-  document.activeElement.blur(); // remove focus from search box
-  searchVisible = false; // search not visible
-}
-function toggleSearch() {
-  return searchVisible ? hideSearch() : showSearch()
+  removeSearchShower();
+  addSearchHider();
 }
 
-document.addEventListener('mouseup', function clickToShowSearch(e) {
-  if (e.target === document.getElementById('search_hint')) {
-    toggleSearch()
-    document.addEventListener('mouseup', function clickToHideSearch(e){
-      if (e.target !== document.getElementById('search_hint')) {
-        toggleSearch()
-        document.removeEventListener('mouseup', clickToHideSearch)
-      }
-    })
+function hideSearch() {
+  fastSearch.classList.remove("shown"); // hide search box
+  document.activeElement.blur(); // remove focus from search box
+  searchVisible = false; // search not visible
+  addSearchShower();
+  removeSearchHider();
+}
+
+function toggleSearch() {
+  return searchVisible ? hideSearch() : showSearch();
+}
+
+function searchShower(event) {
+  if (searchHint.contains(event.target)) {
+    checkSearch();
+    showSearch();
   }
-});
+}
+
+function searchHider(event){
+  if (!fastSearch.contains(event.target)) {
+    hideSearch()
+  }
+}
+
+function addSearchShower() {
+  document.addEventListener('mouseup', searchShower)
+}
+
+function removeSearchShower() {
+  if (typeof(searchShower) !== "undefined") {
+    document.removeEventListener('mouseup', searchShower)
+  }
+}
+
+function addSearchHider() {
+  document.addEventListener('mouseup', searchHider)
+}
+
+function removeSearchHider() {
+  if (typeof(searchHider) !== "undefined") {
+    document.removeEventListener('mouseup', searchHider)
+  }
+}
+
+function checkSearch() {
+  // loads our json data and builds fuse.js search index
+  return firstRun ? loadSearch() : (firstRun = false); // only one first run per page load
+}
 // ==========================================
 // The main keyboard event listener running the show
-//
+// and the initial mouse listener
+addSearchShower()
 document.addEventListener("keydown", function (event) {
   // CMD-P to show / hide Search
   if ((event.metaKey && event.key === "p") || event.key === "Escape") {
     event.preventDefault();
     // Load json search index if first time invoking search
     // Means we don't load json unless searches are going to happen; keep user payload small unless needed
-    if (firstRun) {
-      loadSearch(); // loads our json data and builds fuse.js search index
-      firstRun = false; // let's never do this again
-    }
-
+    checkSearch()
     // Toggle visibility of search box
     toggleSearch()
   }
@@ -55,15 +85,19 @@ document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowDown") {
     if (searchVisible && resultsAvailable) {
       event.preventDefault(); // stop window from scrolling
-      if (document.activeElement == maininput) {
-        first.focus();
+      if (document.activeElement === searchInput) {
+        firstResult.focus();
       } // if the currently focused element is the main input --> focus the first <li>
-      else if (document.activeElement == last) {
-        last.focus();
-      } // if we're at the bottom, stay there
+      else if (document.activeElement === lastResult) {
+         // if we're at the bottom, stay there
+        lastResult.focus();
+      }
       else {
-        document.activeElement.parentElement.nextSibling.firstElementChild.focus();
-      } // otherwise select the next search result
+        // otherwise select the next search result
+        var nextItem = document.activeElement.parentElement.nextSibling.firstElementChild;
+        nextItem.focus();
+        nextItem.scrollIntoView({behavior: "smooth", block: "center"});
+      }
     }
   }
 
@@ -71,14 +105,16 @@ document.addEventListener("keydown", function (event) {
   if (event.key === "ArrowUp") {
     if (searchVisible && resultsAvailable) {
       event.preventDefault(); // stop window from scrolling
-      if (document.activeElement == maininput) {
-        maininput.focus();
+      if (document.activeElement === searchInput) {
+        searchInput.focus();
       } // If we're in the input box, do nothing
-      else if (document.activeElement == first) {
-        maininput.focus();
+      else if (document.activeElement === firstResult) {
+        searchInput.focus();
       } // If we're at the first item, go to input box
       else {
-        document.activeElement.parentElement.previousSibling.firstElementChild.focus();
+        var prevItem = document.activeElement.parentElement.previousSibling.firstElementChild;
+        prevItem.focus();
+        prevItem.scrollIntoView({behavior: "smooth", block: "center"});
       } // Otherwise, select the search result above the current active one
     }
   }
@@ -112,19 +148,24 @@ function fetchJSONFile(path, callback) {
 // load our search index, only executed once
 // on first call of search box (CMD-/)
 //
-function loadSearch() {
+function loadSearch(e) {
   fetchJSONFile("/index.json", function (data) {
     var options = {
       // fuse.js options; check fuse.js website for details
+      keys: ["title", "permalink", "contents", "tags", "subtitle", "lead"],
+      minMatchCharLength: 1,
       shouldSort: true,
+      // ===the fuzzy search magic===
+      // A `distance` of 1000 would require a perfect match
+      // to be within 800 characters of the `location`
+      // to be found using a `threshold` of 0.8
       location: 0,
+      threshold: 0.3,
       distance: 100,
-      threshold: 0.4,
-      minMatchCharLength: 2,
-      keys: ["title", "permalink", "contents", "tags"],
     };
     fuse = new Fuse(data, options); // build the index from the json file
   });
+  return e
 }
 
 // ==========================================
@@ -176,7 +217,7 @@ function executeSearch(term) {
 
   document.getElementById("searchResults").innerHTML = searchitems;
   if (results.length > 0) {
-    first = list.firstChild.firstElementChild; // first result container — used for checking against keyboard up/down location
-    last = list.lastChild.firstElementChild; // last result container — used for checking against keyboard up/down location
+    firstResult = searchResults.firstChild.firstElementChild; // first result container — used for checking against keyboard up/down location
+    lastResult = searchResults.lastChild.firstElementChild; // last result container — used for checking against keyboard up/down location
   }
 }
