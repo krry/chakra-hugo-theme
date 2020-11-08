@@ -13,6 +13,7 @@
 }
 
 .fast-search {
+  max-height: 100vh;
   opacity: 0;
   overflow-y: auto;
   pointer-events: none;
@@ -31,7 +32,7 @@
 
   &.shown {
     opacity: 0.92;
-    pointer-events: unset;
+    pointer-events: auto;
   }
 }
 
@@ -46,7 +47,9 @@
   font-size: 1.5rem;
   outline: none;
   padding: 0.25em 0.5em;
+  position: sticky;
   text-align: left;
+  top: 0;
   width: 100%;
 }
 
@@ -62,6 +65,7 @@
   display: inline-block;
   list-style: none;
   margin: 0;
+  overflow-y: auto;
   padding: 0;
   text-align: left;
   visibility: inherit;

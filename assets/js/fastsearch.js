@@ -7,12 +7,23 @@ var last = list.lastChild; // last child of search list
 var maininput = document.getElementById("searchInput"); // input box for search
 var resultsAvailable = false; // Did we get any search results?
 
+
+function showSearch() {
+  document.getElementById("fastSearch").classList.add("shown"); // show search box
+  document.getElementById("searchInput").focus(); // put focus in input box so you can just start typing
+  searchVisible = true; // search visible
+}
+function hideSearch() {
+  document.getElementById("fastSearch").classList.remove("shown"); // hide search box
+  document.activeElement.blur(); // remove focus from search box
+  searchVisible = false; // search not visible
+}
 // ==========================================
 // The main keyboard event listener running the show
 //
 document.addEventListener("keydown", function (event) {
   // CMD-P to show / hide Search
-  if (event.metaKey && event.key === "p") {
+  if ((event.metaKey && event.key === "p") || event.key === "Escape") {
     event.preventDefault();
     // Load json search index if first time invoking search
     // Means we don't load json unless searches are going to happen; keep user payload small unless needed
@@ -23,22 +34,9 @@ document.addEventListener("keydown", function (event) {
 
     // Toggle visibility of search box
     if (!searchVisible) {
-      document.getElementById("fastSearch").classList.add("shown"); // show search box
-      document.getElementById("searchInput").focus(); // put focus in input box so you can just start typing
-      searchVisible = true; // search visible
+      showSearch();
     } else {
-      document.getElementById("fastSearch").classList.remove("shown"); // hide search box
-      document.activeElement.blur(); // remove focus from search box
-      searchVisible = false; // search not visible
-    }
-  }
-
-  // Allow ESC (27) to close search box
-  if (event.key === "Escape") {
-    if (searchVisible) {
-      document.getElementById("fastSearch").classList.remove("shown");
-      document.activeElement.blur();
-      searchVisible = false;
+      hideSearch();
     }
   }
 
@@ -112,7 +110,7 @@ function loadSearch() {
       distance: 100,
       threshold: 0.4,
       minMatchCharLength: 2,
-      keys: ["title", "permalink", "tags"],
+      keys: ["title", "permalink", "contents", "tags"],
     };
     fuse = new Fuse(data, options); // build the index from the json file
   });
@@ -139,13 +137,13 @@ function executeSearch(term) {
       // weed out duplicates
       for (let s in searchitems) {
         if (searchitems.includes(results[item].item.title)) {
-          debugger;
           continue;
         }
       }
       const tagsArr = results[item].item.tags;
       for (let tag in tagsArr) {
         tags = "#" + tagsArr[tag] + " " + tags;
+        if (tag > 5) break;
       }
       searchitems =
         searchitems +
@@ -156,7 +154,9 @@ function executeSearch(term) {
         results[item].item.title +
         '</h2><p class="results-deets"><time class="results-date">' +
         results[item].item.date +
-        '</time><br/><span class="results-tags">' +
+        '</time><br/><p>' +
+        results[item].item.contents.slice(0, 200) + "…" +
+        '</p><span class="results-tags">' +
         tags +
         "</span></p></a></li>";
     }
