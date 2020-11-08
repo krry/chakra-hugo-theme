@@ -6,14 +6,15 @@
   border-radius: 0.25em;
   color: $color-muted;
   font-family: $font-base;
-  font-weight: lighter;
+  font-weight: normal;
   padding: 0.25em 0.5em;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 150ms;
 
   &:hover {
-    background-color: transparentize($color-muted, 0.8);
+    background-color: transparentize($color: $color-teal, $amount: 0.85);
+    color: $color-teal;
   }
 }
 
@@ -35,11 +36,13 @@
   margin-right: 0;
 }
 
-.taxonomy-term {
+.sidebar {
   a:link {
     color: $white;
   }
+}
 
+.sidebar .taxonomy-term {
   a:hover {
     background-color: transparentize($color-cadet, 0.8);
     color: $color-peri;
