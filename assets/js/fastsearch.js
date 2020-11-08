@@ -18,6 +18,21 @@ function hideSearch() {
   document.activeElement.blur(); // remove focus from search box
   searchVisible = false; // search not visible
 }
+function toggleSearch() {
+  return searchVisible ? hideSearch() : showSearch()
+}
+
+document.addEventListener('mouseup', function clickToShowSearch(e) {
+  if (e.target === document.getElementById('search_hint')) {
+    toggleSearch()
+    document.addEventListener('mouseup', function clickToHideSearch(e){
+      if (e.target !== document.getElementById('search_hint')) {
+        toggleSearch()
+        document.removeEventListener('mouseup', clickToHideSearch)
+      }
+    })
+  }
+});
 // ==========================================
 // The main keyboard event listener running the show
 //
@@ -33,11 +48,7 @@ document.addEventListener("keydown", function (event) {
     }
 
     // Toggle visibility of search box
-    if (!searchVisible) {
-      showSearch();
-    } else {
-      hideSearch();
-    }
+    toggleSearch()
   }
 
   // DOWN (40) arrow
