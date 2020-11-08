@@ -89,9 +89,10 @@ figcaption {
 }
 
 :focus {
-  outline-color: $color-link;
+  outline-color: $color-canary;
+  -moz-outline-radius: 0.25rem;
   outline-style: dashed;
-  outline-width: 1px;
+  outline-width: 2px;
 }
 
 time {

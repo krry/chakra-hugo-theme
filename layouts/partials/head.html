@@ -14,7 +14,11 @@
 {{ partial "sass.html" . -}}
 {{- partial "head_fonts.html" . -}}
 {{- $custom := resources.Get "js/main.js" -}}
+{{- $fuse := resources.Get "js/fuse.js" -}}
+{{- $fastsearch := resources.Get "js/fastsearch.js" -}}
 <script type="text/javascript" src="{{ $custom.Permalink }}" media="screen"></script>
+<script type="text/javascript" src="{{ $fuse.Permalink }}" media="screen"></script>
+<script type="text/javascript" src="{{ $fastsearch.Permalink }}" media="screen"></script>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">

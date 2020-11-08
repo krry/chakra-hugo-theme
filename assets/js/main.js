@@ -1,4 +1,3 @@
-
 /*!
  * domready (c) Dustin Diaz 2014 - License MIT
  * https://github.com/ded/domready

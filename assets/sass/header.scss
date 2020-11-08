@@ -4,7 +4,6 @@ header {
 
   .brand {
     cursor: default;
-    outline: none;
     padding: 1em 0;
   }
 
@@ -17,10 +16,18 @@ header {
     transform-origin: center center;
     transition: 444ms ease-in-out;
     width: 7em;
-
+    
     &:hover {
       transform: rotateZ(-222deg);
     }
+  }
+
+  .home-link {
+    display: block;
+  }
+
+  .home-link:focus {
+    outline: none;
   }
 
   .site-title {

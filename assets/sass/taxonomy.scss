@@ -10,7 +10,7 @@
   padding: 0.25em 0.5em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 250ms;
+  transition: all 150ms;
 
   &:hover {
     background-color: transparentize($color-muted, 0.8);
@@ -31,24 +31,36 @@
   padding: 3px;
 }
 
-.sidebar {
-  .list-inline .taxonomy-term {
-    margin-right: 0;
-  }
+.sidebar .list-inline .taxonomy-term {
+  margin-right: 0;
+}
 
+.taxonomy-term {
   a:link {
     color: $white;
   }
 
-  a:visited {
-    background-color: darken($white, 0.2);
-  }
-
   a:hover {
-    background-color: transparentize($white, 0.8);
+    background-color: transparentize($color-cadet, 0.8);
+    color: $color-peri;
   }
-
+  
   a:active {
-    background-color: $white;
+    background-color: transparentize($color-dank, 0.8);
+    color: $color-teal;
+  }
+  
+  a:visited {
+    color: $gray-light;
+  
+    &:hover {
+      background-color: transparentize($violet, 0.8);
+      color: $mauve;
+    }
+
+    &:active {
+      background-color: transparentize($color-flesh, 0.8);
+      color: $color-salmon;
+    }
   }
 }
