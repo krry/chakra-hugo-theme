@@ -12,10 +12,6 @@
   transition: all 500ms;
 }
 
-::placeholder {
-  color: $gray-light;
-}
-
 .search-input,
 .search-hint.btn {
   border-style: solid;

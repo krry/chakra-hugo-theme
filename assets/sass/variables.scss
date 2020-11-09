@@ -57,8 +57,9 @@ $font-code: 'Inconsolata', monospace;
 $bg-img-phone: url('../img/splatter-back-phone.jpg');
 $bg-img-full: url('../img/splatter-back.jpg');
 $logo-white: url('../img/atmanaut-mono-white.png');
+$whoock: url('../img/whoock.png');
 
 /* MEDIA QUERIES */
 $phone: 'only screen and (max-width: 684px)';
 $tablet: 'only screen and (min-width: 684px)';
-$desktop: 'only screen and (min-width: 900px)';
+$desktop: 'only screen and (min-width: 900px) and (min-height: 684px)';
