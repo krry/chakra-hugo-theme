@@ -61,12 +61,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
 .btn.clear {
   background-color: transparent;
-  border: 1px solid $color-link;
   border: 0;
-  color: $color-link;
-  font-size: 0.75rem;
-
-  &:hover {
-    background-color: transparentize($color-link, 0.85);
-  }
+  color: inherit;
+  font-size: 0.825rem;
 }
