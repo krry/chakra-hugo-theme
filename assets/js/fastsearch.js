@@ -6,11 +6,13 @@ var searchResults = document.getElementById("searchResults"); // targets the <ul
 var searchInput = document.getElementById("searchInput"); // input box for search
 var fastSearch = document.getElementById("fastSearch"); // input box for search
 var searchHint = document.getElementById("searchHint"); // input box for search
+var modkey = document.getElementById("modkey"); // input box for search
 var firstResult = searchResults.firstChild; // first child of search list
 var lastResult = searchResults.lastChild; // last child of search list
 
 function showSearch() {
   fastSearch.classList.add("shown"); // show search box
+  modkey.classList.add('shown');
   searchInput.focus(); // put focus in input box so you can just start typing
   searchVisible = true; // search visible
   removeSearchShower();
