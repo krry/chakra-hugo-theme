@@ -56,7 +56,7 @@
   position: sticky;
   top: 0;
   transform: translate3d(calc(-100% - 4em), 0, 0);
-  transition: opacity 400ms;
+  transition: opacity 444ms $cubic;
   width: calc(100% + 8em);
 
   &::after {
@@ -145,7 +145,7 @@
   opacity: 0.9;
   padding: 1.25em;
   position: relative;
-  transition: all 100ms ease-out;
+  transition: all 222ms $sine;
 
   &:hover {
     border-color: $color-done;

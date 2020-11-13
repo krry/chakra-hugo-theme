@@ -27,6 +27,8 @@ $gray-light: hsl(205, 13%, 48%);
 $gray: hsl(205, 10%, 29%);
 $gray-dark: hsl(205, 12%, 11%);
 $black: hsl(225, 25%, 3%);
+$shade: transparentize($black, 0.25);
+$ghost: transparentize($white, 0.25);
 
 $color-bg: $white;
 $color-text: $gray-dark;
@@ -63,3 +65,33 @@ $whoock: url('../img/whoock.png');
 $phone: 'only screen and (max-width: 684px)';
 $tablet: 'only screen and (min-width: 684px)';
 $desktop: 'only screen and (min-width: 900px) and (min-height: 684px)';
+
+/* EASING FUNCTIONS */
+$cubic: cubic-bezier(0.65, 0.05, 0.36, 1); // cubic
+$quadratic: cubic-bezier(0.46, 0.03, 0.52, 0.96); // quadratic
+$sine: cubic-bezier(0.45, 0.05, 0.55, 0.95); // sine
+
+// $flesh-lite: hsl(340, 53%, 58%); //$color-salmon
+// $flesh: hsl(340, 53%, 52%); //$color-flesh
+// $red: hsl(9, 72%, 54%); //vermillion
+// $yellow: hsl(48, 90%, 74%); //canary
+// $teal: hsl(190, 96%, 33%); //$color-teal
+// $teal-dank: hsl(190, 68%, 17%); //dank
+// $teal-dark: hsl(190, 73%, 6%); //teal-dark
+// $blue: hsl(205, 93%, 39%); //$color-levi
+// $blue-deep: hsl(205, 87%, 30%); //cadet
+// $blue-lite: hsl(205, 58%, 48%); //peri
+// $violet: hsl(295, 43%, 34%);
+// $violet-lite: hsl(295, 51%, 75%);
+// $violet-drab: hsl(295, 32%, 48%);
+// $violet-soft: hsl(295, 32%, 39%);
+// $violet-dank: hsl(295, 33%, 19%);
+// $violet-dark: hsl(295, 23%, 8%);
+// $white: hsl(205, 23%, 84%);
+// $white-lite: hsl(205, 23%, 94%);
+// $gray-lite: hsl(205, 13%, 48%);
+// $gray: hsl(205, 10%, 29%);
+// $gray-dark: hsl(205, 12%, 11%);
+// $black: hsl(225, 25%, 3%);
+// $shade: transparentize($black, 0.25);
+// $ghost: transparentize($white, 0.25);

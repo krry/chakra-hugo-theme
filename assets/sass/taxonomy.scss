@@ -10,7 +10,7 @@
   padding: 0.25em 0.5em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 150ms;
+  transition: all 222ms $sine;
 
   &:hover {
     background-color: transparentize($color: $color-teal, $amount: 0.85);
