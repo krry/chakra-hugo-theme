@@ -6,9 +6,9 @@
 <div class="post">
   <div class="scrolliner"></div>
   {{- with .Params.title_lead -}}
-  <h4 class="post-lead">{{ . | markdownify }}</h4>
+  <h4 class="title-lead">{{ . | markdownify }}</h4>
   {{- end -}}
-  <h1 class="post-title">
+  <h1 class="title-main">
     {{- with .Params.title_main -}}
       {{- . | markdownify -}}
     {{- else -}}
@@ -16,7 +16,7 @@
     {{- end -}}
   </h1>
   {{- with .Params.title_sub -}}
-  <h3 class="post-subtitle">{{.}}</h3>
+  <h3 class="title-sub">{{.}}</h3>
   {{- end -}}
   <div class="byline">
     {{ $author := .Params.author | default "Atmanaut" }}

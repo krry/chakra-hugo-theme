@@ -276,6 +276,12 @@ function fluctuateSpinner(e) {
   bloob.style.animationDuration = distanceFromCenter + 'ms'
   var liveColor = 'hsl(' + (distanceFromCenter % 360) + ', 82%, 82%)'
   bloob.children[0].style.color = liveColor
+  setScrollerColor(liveColor)
+}
+
+function setScrollerColor(color) {
+  var scroller = document.getElementById('scrolliner')
+  scroller.style.backgroundColor = color
 }
 
 function toggleSpins(e) {
@@ -365,30 +371,17 @@ domready(function () {
   var lefty = document.getElementById('lefty')
   var byline = document.getElementById('byline')
   var scrolliner = document.getElementById('scrolliner')
-  console.log('made out')
 
   // display scroll progress in sticky header
   if (scrolliner !== null && byline !== null && main !== null && post !== null) {
-    console.log('made int')
-    var scrollPercent, scrollPosition, relevantHeight, showScroll, bylineHeight, scrollinerPosition
+    var scrollPercent, scrollPosition, relevantHeight
     lefty.addEventListener('scroll', function () {
       scrollPosition = lefty.scrollTop
-      console.log('scrollPosition', scrollPosition)
-      bylineHeight = byline.offsetTop
-      console.log('bylineHeight', bylineHeight)
       relevantHeight = post.offsetHeight - window.innerHeight
-      console.log('relevantHeight', relevantHeight)
       scrollPercent = (100 * scrollPosition) / relevantHeight
-      console.log('scrollPercent', scrollPercent)
       if (typeof scrolliner === 'object') {
-        console.debug('made it', scrolliner)
-        showScroll = scrollPosition > bylineHeight
-        console.log('showScroll', showScroll)
-        scrolliner.classList.toggle('ghost', showScroll)
-        scrollinerPosition = 100 - scrollPercent
-        console.log('scrollinerPosition', scrollinerPosition)
-        scrolliner.style.transform = 'translate3d(calc(' + scrollPercent + '% - 4em), 0, 0)'
-        console.log('scrolliner.style.transform', scrolliner.style.transform)
+        scrolliner.style.transform =
+          'translate3d(-' + (100 - scrollPercent).toString() + 'vw, 0, 0)'
       }
     })
   }
@@ -396,7 +389,7 @@ domready(function () {
 
 // if keyboard navver, leave the visual accommodations alone
 function handleFirstTab(e) {
-  if (e.keyCode === 9) {
+  if (e.key === 'Tab') {
     // the "I am a keyboard user" key
     document.body.classList.add('user-is-tabbing')
     window.removeEventListener('keydown', handleFirstTab)
