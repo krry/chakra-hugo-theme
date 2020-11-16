@@ -4,59 +4,23 @@
   blockquote {
     font-family: $font-text;
   }
+
+  .list-taxonomies {
+    text-align: center;
+  }
 }
 
 .byline {
   font-size: 0.75em;
 }
 
-.read-more:link,
-.read-more:visited,
-.read-more:active {
-  color: $color-text;
-  display: block;
-  text-decoration: none;
-}
-
-.read-more:visited {
-  opacity: 0.8;
-}
-
-.read-more:link:hover,
-.read-more:visited:hover {
-  color: $color-peri;
-}
-
-.read-more,
-.read-more:hover {
-  p,
-  h3,
-  ul,
-  li {
-    color: $color-text;
-    text-decoration: none;
-  }
-
-  time {
-    color: $color-muted;
-  }
-
-  ul {
-    font-size: 0.875rem;
-  }
-}
-
-.post-summary .list-taxonomies {
-  text-align: center;
-}
-
 .scrolliner {
   background-color: $color-title;
   height: 6px;
-  position: sticky;
+  left: 0;
+  position: fixed;
   top: 0;
   transform: translate3d(calc(-100% - 4em), 0, 0);
-  transition: opacity 444ms $cubic;
   width: calc(100% + 8em);
 
   &::after {

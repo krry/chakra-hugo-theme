@@ -274,7 +274,7 @@ function fluctuateSpinner(e) {
   // calculate distance between these points every interval
   var distanceFromCenter = measureDistance(bloob, mX, mY)
   bloob.style.animationDuration = distanceFromCenter + 'ms'
-  var liveColor = 'hsl(' + (distanceFromCenter % 360) + ', 82%, 61%)'
+  var liveColor = 'hsl(' + (distanceFromCenter % 360) + ', 82%, 82%)'
   bloob.children[0].style.color = liveColor
 }
 
@@ -349,7 +349,6 @@ domready(function () {
   document.addEventListener('keydown', handleSearchKeys)
 
   // execute search as each character is typed
-  //
   document.getElementById('searchInput').onkeyup = function () {
     executeSearch(this.value)
   }
@@ -361,29 +360,35 @@ domready(function () {
     document.documentElement.style.backgroundColor = ''
   }, 500)
 
-  var scrollPercent,
-    scrollPosition,
-    relevantHeight,
-    showScroll,
-    bylineHeight,
-    scrollinerPosition,
-    byline = document.querySelector('.byline'),
-    scrolliner = document.querySelector('.scrolliner'),
-    main = document.querySelector('main'),
-    post = document.querySelector('.post')
+  var main = document.getElementById('content')
+  var post = document.getElementById('post_container')
+  var lefty = document.getElementById('lefty')
+  var byline = document.getElementById('byline')
+  var scrolliner = document.getElementById('scrolliner')
+  console.log('made out')
 
   // display scroll progress in sticky header
   if (scrolliner !== null && byline !== null && main !== null && post !== null) {
-    main.addEventListener('scroll', function () {
-      scrollPosition = main.scrollTop
+    console.log('made int')
+    var scrollPercent, scrollPosition, relevantHeight, showScroll, bylineHeight, scrollinerPosition
+    lefty.addEventListener('scroll', function () {
+      scrollPosition = lefty.scrollTop
+      console.log('scrollPosition', scrollPosition)
       bylineHeight = byline.offsetTop
+      console.log('bylineHeight', bylineHeight)
       relevantHeight = post.offsetHeight - window.innerHeight
+      console.log('relevantHeight', relevantHeight)
       scrollPercent = (100 * scrollPosition) / relevantHeight
+      console.log('scrollPercent', scrollPercent)
       if (typeof scrolliner === 'object') {
-        showScroll = scrollPosition < bylineHeight
+        console.debug('made it', scrolliner)
+        showScroll = scrollPosition > bylineHeight
+        console.log('showScroll', showScroll)
         scrolliner.classList.toggle('ghost', showScroll)
-        scrollinerPosition = scrollPercent - 100
-        scrolliner.style.transform = 'translate3d(calc(' + scrollinerPosition + '% - 4em), 0, 0)'
+        scrollinerPosition = 100 - scrollPercent
+        console.log('scrollinerPosition', scrollinerPosition)
+        scrolliner.style.transform = 'translate3d(calc(' + scrollPercent + '% - 4em), 0, 0)'
+        console.log('scrolliner.style.transform', scrolliner.style.transform)
       }
     })
   }
