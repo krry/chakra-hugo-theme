@@ -15,7 +15,9 @@ var spinOn = false
 
 function showSearch() {
   fastSearch.classList.add('shown') // show search box
-  modkey.classList.add('shown')
+  setTimeout(() => {
+    modkey.classList.add('shown')
+  }, 444)
   searchInput.focus() // put focus in input box so you can just start typing
   searchVisible = true // search visible
   removeSearchShower()
@@ -24,6 +26,7 @@ function showSearch() {
 
 function hideSearch() {
   fastSearch.classList.remove('shown') // hide search box
+  modkey.classList.remove('shown')
   document.activeElement.blur() // remove focus from search box
   searchVisible = false // search not visible
   addSearchShower()
@@ -168,6 +171,7 @@ function loadSearch(e) {
 // in the search box
 //
 function executeSearch(term) {
+  // if (term.contains('`')) return
   let results = fuse.search(term) // the actual query being run using fuse.js
   let searchitems = '' // our results bucket
 

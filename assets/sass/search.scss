@@ -3,7 +3,7 @@
 .search-input,
 .search-results,
 .search-hint.btn {
-  transition: all 444ms $quadratic;
+  transition: 444ms $quadratic;
 }
 
 .search-input,
@@ -44,6 +44,7 @@
   background-color: $color-ink;
   border-color: $violet;
   border-radius: 0.25rem;
+  direction: ltr;
   max-width: 0;
   opacity: 0;
   outline: none;
@@ -104,6 +105,7 @@
 }
 
 .fast-search {
+  direction: rtl;
   display: inline-block;
   left: 0;
   max-height: 100vh;
