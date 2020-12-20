@@ -9,7 +9,7 @@ ul li {
   list-style-type: none;
 }
 
-.post li::before {
+.post ul li::before {
   content: '\2619';
   margin-left: -1em;
   margin-right: 0.5em;
