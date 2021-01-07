@@ -8,8 +8,11 @@
   <h4>Discussed in:</h4>
   <dl>
     {{ range .Data.Pages }}
-    <dt><a href="{{.RelPermalink}}">{{ .Title }}</a></dt>
-    <dd>{{ .Summary }}</dd>
+    <hr class="divider">
+    <a href="{{.RelPermalink}}">
+      <dt>{{ .Title }}</dt>
+      <dd>{{ .Summary }}</dd>
+    </a>
     {{ end }}
   </dl>
   {{ partial "tags/sources.html" . }}

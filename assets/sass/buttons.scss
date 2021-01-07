@@ -43,7 +43,7 @@ body:not(.user-is-tabbing) textarea:focus {
   height: 2.25em;
   line-height: 2.25em;
   padding: 0 1.25em;
-  transition: all $quick $sine;
+  transition: all $quick $ease-sine;
 }
 
 .btn.center {

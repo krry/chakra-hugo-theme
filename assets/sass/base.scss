@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: $font-base;
+  font-family: $font-sans;
 }
 
 body {
@@ -89,9 +89,11 @@ figcaption {
 }
 
 :focus {
-  outline-color: $color-canary;
-  -moz-outline-radius: 0.25rem;
-  outline-style: dashed;
+  outline-color: $color-teal;
+  outline-offset: 3px;
+  -moz-outline-radius: 0.5rem;
+  -o-outline-radius: 0.5rem;
+  outline-style: dotted;
   outline-width: 2px;
 }
 

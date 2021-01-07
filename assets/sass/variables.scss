@@ -27,8 +27,8 @@ $color-gray-light: hsl(205, 13%, 48%);
 $color-gray: hsl(205, 10%, 29%);
 $color-gray-dark: hsl(205, 12%, 11%);
 $color-black: hsl(225, 25%, 3%);
-$color-shade: transparentize($color-black, 0.25);
-$color-ghost: transparentize($color-white, 0.25);
+$color-shade: transparentize($color-black, 0.75);
+$color-ghost: transparentize($color-white, 0.75);
 
 $color-bg: $color-white;
 $color-text: $color-gray-dark;
@@ -44,16 +44,16 @@ $color-comments-header: $color-title;
 $color-comments-border: $color-teal-dark;
 
 /* FONTS
- * base: Open Sans, sans-serif
- * text: Aleo, serif
- * title: Righteous, Comic Sans MS
+ * base: Quicksand, (formerly Open Sans), sans-serif
+ * text: Quicksand, (tried Kreon, formerly Aleo), serif
+ * title: MuseoModerno, (formerly Righteous), Comic Sans MS
  * code: Inconsolata, monospace
  * */
 
-$font-base: 'Open Sans', system-ui, sans-serif;
-$font-text: 'Kreon', 'Aleo', 'Georgia', serif;
+$font-sans: 'Quicksand', 'Open Sans', system-ui, sans-serif;
+$font-serif: 'Quicksand', 'Georgia', serif;
 $font-title: 'MuseoModerno', 'Righteous', 'Futura', 'Comic Sans MS', cursive;
-$font-code: 'Inconsolata', monospace;
+$font-mono: 'Inconsolata', monospace;
 
 /* IMGS */
 $bg-img-phone: url('../img/splatter-back-phone.jpg');
@@ -67,36 +67,11 @@ $tablet: 'only screen and (min-width: 684px)';
 $desktop: 'only screen and (min-width: 900px) and (min-height: 684px)';
 
 /* EASING FUNCTIONS */
-$cubic: cubic-bezier(0.65, 0.05, 0.36, 1); // cubic
-$quadratic: cubic-bezier(0.46, 0.03, 0.52, 0.96); // quadratic
-$sine: cubic-bezier(0.45, 0.05, 0.55, 0.95); // sine
+$ease-cubic: cubic-bezier(0.65, 0.05, 0.36, 1); // cubic
+$ease-quad: cubic-bezier(0.46, 0.03, 0.52, 0.96); // quadratic
+$ease-sine: cubic-bezier(0.45, 0.05, 0.55, 0.95); // sine
 
 /* DURATIONS */
 $quick: 333ms;
 $snappy: 555ms;
 $easily: 777ms;
-
-// $flesh-lite: hsl(340, 53%, 58%); //$color-salmon
-// $flesh: hsl(340, 53%, 52%); //$color-flesh
-// $red: hsl(9, 72%, 54%); //vermillion
-// $yellow: hsl(48, 90%, 74%); //canary
-// $teal: hsl(190, 96%, 33%); //$color-teal
-// $teal-dank: hsl(190, 68%, 17%); //dank
-// $color-teal-dark: hsl(190, 73%, 6%); //teal-dark
-// $blue: hsl(205, 93%, 39%); //$color-levi
-// $blue-deep: hsl(205, 87%, 30%); //cadet
-// $blue-lite: hsl(205, 58%, 48%); //peri
-// $color-violet: hsl(295, 43%, 34%);
-// $color-violet-lite: hsl(295, 51%, 75%);
-// $color-violet-drab: hsl(295, 32%, 48%);
-// $color-violet-soft: hsl(295, 32%, 39%);
-// $color-violet-dank: hsl(295, 33%, 19%);
-// $color-violet-dark: hsl(295, 23%, 8%);
-// $color-white: hsl(205, 23%, 84%);
-// $color-white-lite: hsl(205, 23%, 94%);
-// $color-gray-lite: hsl(205, 13%, 48%);
-// $color-gray: hsl(205, 10%, 29%);
-// $color-gray-dark: hsl(205, 12%, 11%);
-// $color-black: hsl(225, 25%, 3%);
-// $color-shade: transparentize($color-black, 0.25);
-// $color-ghost: transparentize($color-white, 0.25);

@@ -18,9 +18,9 @@ samp {
 h4 > code,
 p > code {
   background-color: $color-white-extra;
-  font-size: 1.25em;
-  margin: 0 0.125em;
-  padding: 0 0.25em;
+  border-radius: 2px;
+  margin: 0 1px;
+  padding: 0 2px;
 }
 
 .highlight {
@@ -37,7 +37,7 @@ p > code {
   ul,
   ol,
   dl {
-    font-family: $font-code;
+    font-family: $font-mono;
   }
 
   pre {

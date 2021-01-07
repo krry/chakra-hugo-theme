@@ -25,7 +25,7 @@ a:visited:active {
 .sidebar a {
   opacity: 0.8;
   text-decoration: none;
-  transition: all $quick $sine;
+  transition: all $quick $ease-sine;
 
   &:hover {
     opacity: 1;

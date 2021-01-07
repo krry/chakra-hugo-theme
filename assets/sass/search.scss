@@ -3,7 +3,7 @@
 .search-input,
 .search-results,
 .search-hint.btn {
-  transition: $snappy $quadratic;
+  transition: $snappy $ease-quad;
 }
 
 .search-input,
@@ -12,7 +12,7 @@
   border-width: 1px;
   color: $color-white;
   display: block;
-  font-family: $font-text;
+  font-family: $font-serif;
   font-size: 1.125rem;
   height: 2.25rem;
   line-height: 2.25rem;

@@ -1,3 +1,63 @@
+.taxonomy {
+  .divider {
+    display: none;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  a + .divider {
+    background-image: linear-gradient(to right, transparent, $color-shade, transparent);
+    border: 0;
+    border-radius: 100%;
+    display: block;
+    height: 2px;
+    margin: 2rem auto;
+    width: 77%;
+  }
+
+  dt {
+    background-clip: text;
+    background-image: linear-gradient(90deg, $color-teal, $color-levi);
+    color: transparent;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-decoration-color: transparent;
+  }
+  
+  a:hover dt {
+    background-image: linear-gradient(180deg, $color-teal, $color-dank);
+    text-decoration-color: $color-dank;
+  }
+
+  dd {
+    border-left: 5px solid $color-shade;
+    color: $color-text;
+    margin-left: 1em;
+    padding-left: 1em;
+    transition: $snappy;
+  }
+
+  a:hover dd {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(180deg, $color-dank, $color-teal);
+  }
+}
+
+.taxonomy h1 {
+  font-size: 1.5em;
+}
+
+.taxonomy h2 {
+  font-size: 1.25em;
+}
+
+.taxonomy h3 {
+  font-size: 1em;
+}
+
 .taxonomy-term {
   font-size: 75%;
 }
@@ -5,12 +65,12 @@
 .taxonomy-term a {
   border-radius: 0.25em;
   color: $color-muted;
-  font-family: $font-base;
+  font-family: $font-sans;
   font-weight: 300;
   padding: 0.25em 0.5em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all $quick $sine;
+  transition: all $quick $ease-sine;
 
   &:hover {
     background-color: transparentize($color: $color-teal, $amount: 0.85);

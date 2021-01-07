@@ -16,7 +16,7 @@ header {
     background-size: contain;
     margin: 0 auto;
     opacity: 0.7;
-    transition: $quick $cubic;
+    transition: $quick $ease-cubic;
     
     &:hover,
     &:focus {

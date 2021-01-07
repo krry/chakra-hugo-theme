@@ -1,5 +1,5 @@
 .list-reset {
-  font-family: $font-base;
+  font-family: $font-sans;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -7,6 +7,10 @@
 
 ul li {
   list-style-type: none;
+}
+
+.post li {
+  font-family: $font-serif;
 }
 
 .post ul li::before {
@@ -28,7 +32,7 @@ ul li {
 }
 
 dt {
-  font-family: $font-base;
+  font-family: $font-sans;
   font-weight: 500;
   margin-bottom: 0.5em;
 }
@@ -38,5 +42,5 @@ dd + dt {
 }
 
 .list-sources {
-  font-family: $font-base;
+  font-family: $font-sans;
 }
