@@ -5,8 +5,20 @@ footer p {
 }
 
 footer a {
-  color: $white;
-  font-weight: lighter;
+  color: $color-white-extra;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: $color-levi;
+}
+
+footer a:visited {
+  color: $color-white;
+}
+
+footer a:visited:hover {
+  color: $color-pink;
 }
 
 .crecom {

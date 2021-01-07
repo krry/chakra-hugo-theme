@@ -3,14 +3,14 @@
 .search-input,
 .search-results,
 .search-hint.btn {
-  transition: 444ms $quadratic;
+  transition: $snappy $quadratic;
 }
 
 .search-input,
 .search-hint.btn {
   border-style: solid;
   border-width: 1px;
-  color: $white;
+  color: $color-white;
   display: block;
   font-family: $font-text;
   font-size: 1.125rem;
@@ -42,7 +42,7 @@
 
 .search-input {
   background-color: $color-ink;
-  border-color: $violet;
+  border-color: $color-violet;
   border-radius: 0.25rem;
   direction: ltr;
   max-width: 0;
@@ -63,11 +63,11 @@
   }
 
   &:focus {
-    border-color: $mauve;
+    border-color: $color-mauve;
   }
   
   &:hover {
-    border-color: $pastel-pink;
+    border-color: $color-pink;
   }
 }  
 
@@ -82,8 +82,8 @@
   position: relative;
 }
 
-.modkey {
-  color: $white;
+.mod-key {
+  color: $color-white;
   display: none;
   font-size: 0.875em;
   font-weight: 500;
@@ -97,15 +97,16 @@
   z-index: 16;
   @media #{$tablet} {
     right: 2.5rem;
-  }
-
-  &.shown {
-    display: block;
+  
+    &.shown {
+      display: block;
+    }
   }
 }
 
 .fast-search {
-  direction: rtl;
+  // this messes up the .mod-key
+  // direction: rtl;
   display: inline-block;
   left: 0;
   max-height: 100vh;
@@ -171,16 +172,16 @@
 }
 
 .search-results a:link {
-  color: $pastel-pink;
+  color: $color-pink;
   display: inline-block;
-  font-weight: normal;
+  font-weight: 500;
   text-decoration: none !important;
 }
 
 .search-results {
   a:hover,
   a:focus {
-    background-color: $mauve;
+    background-color: $color-mauve;
     color: $color-text;
     outline: 0;
   
@@ -192,21 +193,21 @@
 }
 
 .results-link {
-  color: $pastel-pink;
+  color: $color-pink;
   padding: 0.75rem 1rem;
 
   &:visited {
-    color: $gray-light;
+    color: $color-gray-light;
   }
 }
 
 .results-title {
-  color: $white;
+  color: $color-white;
   margin: 0.125em 0;
 }
 
 .results-date {
-  color: $gray-light;
+  color: $color-gray-light;
 }
 
 .results-tags {

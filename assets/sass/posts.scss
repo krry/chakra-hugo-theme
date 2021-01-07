@@ -32,7 +32,7 @@
 
 .post,
 .taxonomy {
-  background-color: $white;
+  background-color: $color-white;
   border-radius: 1.25em;
   margin: 1.325em 0.625rem;
   min-height: 100vh;
@@ -40,7 +40,7 @@
   position: relative;
 
   @media #{$tablet} {
-    border-radius: 0 $curvature $curvature 0;
+    border-radius: 0 $bevel $bevel 0;
     margin: 0 2em 2em 0;
     padding: 2em;
   }
@@ -80,7 +80,7 @@
   .title-lead,
   .title-sub {
     color: $color-muted;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: capitalize;
   }
   
@@ -103,20 +103,20 @@
 }
 
 .post-summary {
-  background-color: $white;
+  background-color: $color-white;
   border-radius: 1.25em;
   margin: 0.625em;
   opacity: 0.9;
   padding: 1.25em;
   position: relative;
-  transition: all 222ms $sine;
+  transition: all $quick $sine;
 
   &:hover {
     border-color: $color-done;
     opacity: 1;
 
     .read-on {
-      font-weight: bolder;
+      font-weight: 500;
     }
   }
 

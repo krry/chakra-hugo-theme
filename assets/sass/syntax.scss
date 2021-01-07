@@ -6,18 +6,18 @@ samp {
 }
 
 .chroma {
-  background-color: $black;
+  background-color: $color-black;
 
   .c,
   .c1,
   .cm {
-    color: $gray-light;
+    color: $color-gray-light;
   }
 }
 
 h4 > code,
 p > code {
-  background-color: $extra-white;
+  background-color: $color-white-extra;
   font-size: 1.25em;
   margin: 0 0.125em;
   padding: 0 0.25em;
@@ -41,7 +41,6 @@ p > code {
   }
 
   pre {
-    font-size: 1.25em;
     margin: auto;
     max-width: 80ch;
     padding: 1rem;

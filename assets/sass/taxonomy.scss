@@ -6,11 +6,11 @@
   border-radius: 0.25em;
   color: $color-muted;
   font-family: $font-base;
-  font-weight: normal;
+  font-weight: 300;
   padding: 0.25em 0.5em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 222ms $sine;
+  transition: all $quick $sine;
 
   &:hover {
     background-color: transparentize($color: $color-teal, $amount: 0.85);
@@ -31,7 +31,7 @@
   background: $color-cadet;
   border: 3px solid $color-dank;
   border-radius: 1em;
-  box-shadow: inset 0 0 1em 0.25em transparentize($black, 0.5);
+  box-shadow: inset 0 0 1em 0.25em transparentize($color-black, 0.5);
   max-height: 240px;
   padding: 3px;
 }
@@ -42,7 +42,7 @@
 
 .sidebar {
   a:link {
-    color: $white;
+    color: $color-white;
   }
 }
 
@@ -58,11 +58,11 @@
   }
   
   a:visited {
-    color: $gray-light;
+    color: $color-gray-light;
   
     &:hover {
-      background-color: transparentize($violet, 0.8);
-      color: $mauve;
+      background-color: transparentize($color-violet, 0.8);
+      color: $color-mauve;
     }
 
     &:active {

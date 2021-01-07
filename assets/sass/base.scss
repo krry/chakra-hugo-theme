@@ -21,12 +21,12 @@ body {
 }
 
 ::placeholder {
-  color: $ghost;
+  color: $color-ghost;
 }
 
 ::selection {
-  background-color: $orchid;
-  color: $extra-white;
+  background-color: $color-orchid;
+  color: $color-white-extra;
 }
 
 *,
@@ -84,7 +84,7 @@ hr {
 
 figcaption {
   font-size: 75%;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
 }
 

@@ -8,7 +8,7 @@ header {
   }
 
   .logo {
-    animation: spinner 222ms infinite;
+    animation: spinner $quick infinite;
     animation-play-state: paused;
     animation-timing-function: linear;
     background-position: center center;
@@ -16,7 +16,7 @@ header {
     background-size: contain;
     margin: 0 auto;
     opacity: 0.7;
-    transition: 222ms $cubic;
+    transition: $quick $cubic;
     
     &:hover,
     &:focus {
@@ -46,7 +46,7 @@ header {
 
   .site-title,
   .site-tagline {
-    color: $white;
+    color: $color-white;
     display: block;
   }
 }

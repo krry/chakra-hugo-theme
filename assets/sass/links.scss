@@ -7,11 +7,11 @@ a:link:hover {
 }
 
 a:visited {
-  color: $violet;
+  color: $color-violet;
 }
 
 a:visited:hover {
-  color: $mauve;
+  color: $color-mauve;
 }
 
 a:active {
@@ -23,10 +23,9 @@ a:visited:active {
 }
 
 .sidebar a {
-  font-weight: bolder;
   opacity: 0.8;
   text-decoration: none;
-  transition: all 222ms $sine;
+  transition: all $quick $sine;
 
   &:hover {
     opacity: 1;

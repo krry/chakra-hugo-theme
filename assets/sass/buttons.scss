@@ -38,12 +38,12 @@ body:not(.user-is-tabbing) textarea:focus {
   background-color: $color-teal;
   border: 2px solid $color-dank;
   border-radius: 0.25em;
-  color: $extra-white;
+  color: $color-white-extra;
   font-size: 0.875rem;
   height: 2.25em;
   line-height: 2.25em;
   padding: 0 1.25em;
-  transition: all 222ms $sine;
+  transition: all $quick $sine;
 }
 
 .btn.center {
