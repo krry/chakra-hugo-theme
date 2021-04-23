@@ -4,3 +4,4 @@ resources
 yarn-error.log
 .tags
 .DS_Store
+.sass-cache

@@ -19,6 +19,7 @@
   }
 
   dt {
+    -webkit-background-clip: text;
     background-clip: text;
     background-image: linear-gradient(90deg, $color-teal, $color-levi);
     color: transparent;
@@ -26,7 +27,7 @@
     font-weight: bolder;
     text-decoration-color: transparent;
   }
-  
+
   a:hover dt {
     background-image: linear-gradient(180deg, $color-teal, $color-dank);
     text-decoration-color: $color-dank;
@@ -111,15 +112,15 @@
     background-color: transparentize($color-cadet, 0.8);
     color: $color-peri;
   }
-  
+
   a:active {
     background-color: transparentize($color-dank, 0.8);
     color: $color-teal;
   }
-  
+
   a:visited {
     color: $color-gray-light;
-  
+
     &:hover {
       background-color: transparentize($color-violet, 0.8);
       color: $color-mauve;

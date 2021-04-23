@@ -66,6 +66,7 @@
 }
 
 .title-main {
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(-90deg, $color-teal, $color-dank);
   color: transparent;
@@ -86,6 +87,7 @@
 
 .title-lead,
 .post h3 {
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(90deg, $color-dank, $color-peri);
   color: transparent;
@@ -97,6 +99,7 @@
 
 .title-sub,
 .post h2 {
+  -webkit-background-clip: text;
   background-clip: text;
   background-image: linear-gradient(90deg, $color-dank, $color-levi);
   color: transparent;
