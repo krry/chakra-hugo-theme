@@ -3,3 +3,4 @@ node_modules
 resources
 yarn-error.log
 .tags
+.DS_Store
