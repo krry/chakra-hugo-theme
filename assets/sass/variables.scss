@@ -7,7 +7,7 @@ $bevel: 2em;
 
 $color-salmon: hsl(340, 53%, 58%);
 $color-flesh: hsl(340, 53%, 52%);
-$color-vermillion: hsl(9, 72%, 54%);
+$color-vermilion: hsl(9, 72%, 54%);
 $color-canary: hsl(48, 90%, 74%);
 $color-teal: hsl(190, 96%, 33%);
 $color-dank: hsl(206, 68%, 17%);
@@ -37,7 +37,7 @@ $color-title: $color-dank;
 $color-highlight: $color-peri;
 $color-muted: $color-gray;
 $color-done: $color-ink;
-$color-alert: $color-vermillion;
+$color-alert: $color-vermilion;
 $color-comments-bg: $color-black;
 $color-comments-link: $color-link;
 $color-comments-header: $color-title;
@@ -48,7 +48,9 @@ $color-comments-border: $color-teal-dark;
  * text: Quicksand, (tried Kreon, formerly Aleo), serif
  * title: MuseoModerno, (formerly Righteous), Comic Sans MS
  * code: Inconsolata, monospace
+ * TODO: transition to Recursive font
  * */
+
 
 $font-sans: 'Quicksand', 'Open Sans', system-ui, sans-serif;
 $font-serif: 'Quicksand', 'Georgia', serif;
