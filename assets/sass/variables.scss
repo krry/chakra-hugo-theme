@@ -52,10 +52,22 @@ $color-comments-border: $color-teal-dark;
  * */
 
 
-$font-sans: 'Quicksand', 'Open Sans', system-ui, sans-serif;
-$font-serif: 'Quicksand', 'Georgia', serif;
-$font-title: 'MuseoModerno', 'Righteous', 'Futura', 'Comic Sans MS', cursive;
-$font-mono: 'Inconsolata', monospace;
+$sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times,
+		Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+// $font-sans: 'Quicksand', 'Open Sans', system-ui, sans-serif;
+// $font-serif: 'Quicksand', 'Georgia', serif;
+// $font-title: 'MuseoModerno', 'Righteous', 'Futura', 'Comic Sans MS', cursive;
+// $font-mono: 'Inconsolata', monospace;
+
+$font-sans: 'Recursive', $sans-serif;
+$font-serif: 'Recursive', $serif;
+$font-mono: 'Recursive', $mono;
+$font-title: 'Recursive', $sans-serif;
 
 /* IMGS */
 $bg-img-phone: url('../img/splatter-back-phone.jpg');

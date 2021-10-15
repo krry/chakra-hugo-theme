@@ -1,6 +1,21 @@
 html {
   box-sizing: border-box;
   font-family: $font-sans;
+	$font-weight: 400;
+	$font-slant: 0;
+	$font-casual: 0;
+	$font-mono: 0;
+	$font-cursive: 1;
+}
+
+* {
+	/* prettier-ignore */
+	font-variation-settings:
+		'wght' $font-weight,
+		'slnt' $font-slant,
+		'CASL' $font-casual,
+		'MONO' $font-mono,
+		'CRSV' $font-cursive;
 }
 
 body {
