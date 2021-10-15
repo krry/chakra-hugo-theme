@@ -12,7 +12,7 @@
 }
 
 .byline {
-  font-size: 0.75em;
+  font-size: 0.721em;
 }
 
 .scrolliner {
@@ -34,10 +34,10 @@
 .post,
 .taxonomy {
   background-color: $color-white;
-  border-radius: 1.25em;
-  margin: 1.325em 0.625rem;
+  border-radius: 1.236em;
+  margin: 1.236em 0.618rem;
   min-height: 100vh;
-  padding: 1.25rem 1.25em;
+  padding: 1.236rem 1.236em;
   position: relative;
 
   @media #{$tablet} {
@@ -51,25 +51,22 @@
   }
 }
 
-.post h2 {
-  font-family: $font-title;
+.post {
+  p, ul li, ol li {
+    max-width: 80ch;
+    line-height: 1.618;
+  }
 }
 
-.post p {
-  line-height: 1.375;
-  max-width: 80ch;
-}
-
-.post ul li,
-.post ol li {
-  line-height: 1.5;
+.title-main,
+.title-sub,
+.title-lead,
+.taxonomy-title,
+.taxonomy-subtitle {
+  line-height: 1.1618;
 }
 
 .title-main {
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(-90deg, $color-teal, $color-dank);
-  color: transparent;
   margin: 0.5em 0;
 }
 
@@ -78,41 +75,24 @@
   text-transform: capitalize;
 }
 
-.title-lead {
-  color: inherit;
-  font-weight: 700;
-  margin: 1em 0 1.5em;
-  text-align: center;
-}
-
-.title-lead,
-.post h3 {
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(90deg, $color-dank, $color-peri);
-  color: transparent;
-}
-
-.title-sub {
-  font-size: 1rem;
+.title-main + .title-sub {
+  font-size: 125%;
 }
 
 .title-sub,
 .post h2 {
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: linear-gradient(90deg, $color-dank, $color-levi);
-  color: transparent;
-  font-weight: 700;
 }
 
-.title-main,
-.taxonomy-title,
-.taxonomy-subtitle,
+.title-lead {
+  text-align: center;
+}
+
+.byline + .title-lead {
+  font-size: 150%;
+}
+
 .title-lead,
-.title-sub {
-  line-height: 1.15;
-  margin: 0.5rem 0;
+.post h3 {
 }
 
 img + p {

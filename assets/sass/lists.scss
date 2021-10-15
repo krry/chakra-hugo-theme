@@ -31,6 +31,10 @@ ul li {
   }
 }
 
+ul.tag-cloud {
+  line-height: 1.309;
+}
+
 dt {
   font-family: $font-sans;
   font-weight: 500;
@@ -42,5 +46,5 @@ dd + dt {
 }
 
 .list-sources {
-  font-family: $font-sans;
+  // font-family: $font-sans;
 }

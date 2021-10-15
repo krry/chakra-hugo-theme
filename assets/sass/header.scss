@@ -17,7 +17,7 @@ header {
     margin: 0 auto;
     opacity: 0.7;
     transition: $quick $ease-cubic;
-    
+
     &:hover,
     &:focus {
       opacity: 1;
@@ -26,14 +26,6 @@ header {
 
   .bloob {
     width: 100%;
-  }
-
-  .home-link {
-    display: inline-block;
-  }
-
-  .home-link:focus {
-    outline: none;
   }
 
   .site-title {
@@ -46,7 +38,25 @@ header {
 
   .site-title,
   .site-tagline {
-    color: $color-white;
+    filter: brightness(200%) saturate(0.721);
     display: block;
+  }
+}
+
+.sidebar a.home-link {
+  opacity: 1;
+  display: inline-block;
+  .site-title,
+  .site-tagline {
+    --font-weight: 824;
+  }
+  &:focus,
+  &:hover {
+    .site-title,
+    .site-tagline {
+      --font-weight: 618;
+      color: $color-pink;
+    }
+    outline: none;
   }
 }

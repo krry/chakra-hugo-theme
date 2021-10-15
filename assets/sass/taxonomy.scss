@@ -23,7 +23,6 @@
     background-clip: text;
     background-image: linear-gradient(90deg, $color-teal, $color-levi);
     color: transparent;
-    font-size: 1.5em;
     font-weight: bolder;
     text-decoration-color: transparent;
   }
@@ -45,37 +44,61 @@
     border-image-slice: 1;
     border-image-source: linear-gradient(180deg, $color-dank, $color-teal);
   }
+
+  h1,
+  .taxonomy-title {
+    // font-size: 2em;
+    text-align: center;
+  }
+
+  h3 {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+    border: 1px solid $color-shade;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  dl {
+    margin-bottom: 3rem;
+  }
 }
 
-.taxonomy h1 {
-  font-size: 1.5em;
+.sources {
+  width: 61.8%;
+  margin-left: auto;
+  margin-right: auto;
+  ul, li {
+    padding-left: 0;
+  }
+  h2 {
+    text-align: center;
+  }
 }
 
-.taxonomy h2 {
-  font-size: 1.25em;
-}
-
-.taxonomy h3 {
-  font-size: 1em;
+.taxonomy-title {
+  font-size: 2em;
 }
 
 .taxonomy-term {
   font-size: 75%;
-}
+  a {
+    border-radius: 0.25em;
+    color: $color-muted;
+    font-family: $font-sans;
+    font-weight: 300;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all $quick $ease-sine;
 
-.taxonomy-term a {
-  border-radius: 0.25em;
-  color: $color-muted;
-  font-family: $font-sans;
-  font-weight: 300;
-  padding: 0.25em 0.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all $quick $ease-sine;
-
-  &:hover {
-    background-color: transparentize($color: $color-teal, $amount: 0.85);
-    color: $color-teal;
+    &:hover {
+      background-color: transparentize($color: $color-teal, $amount: 0.85);
+      color: $color-teal;
+    }
   }
 }
 
