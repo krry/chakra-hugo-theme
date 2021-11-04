@@ -2,7 +2,7 @@
     "name": "chakra",
     "description": "A left-handed Hugo theme balancing its energy in left-field",
     "license": "MIT",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "repository": "https://github.com/krry/chakra-hugo-theme.git",
     "browserslist": [
         "last 1 version",
