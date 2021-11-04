@@ -19,5 +19,8 @@
     "devDependencies": {
         "stylelint": "^13.7.2",
         "stylelint-config-sass-guidelines": "^7.1.0"
+    },
+    "scripts": {
+        "release": "git commit && git tag && git push --tags && git push"
     }
 }
