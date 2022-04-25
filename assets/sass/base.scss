@@ -8,7 +8,6 @@
 
 html {
   box-sizing: border-box;
-  font-family: $font-sans;
 
   @media #{$desktop} {
     font-size: 123.6%;
@@ -16,8 +15,8 @@ html {
 }
 
 * {
-	/* prettier-ignore */
-	font-variation-settings:
+  /* prettier-ignore */
+  font-variation-settings:
 		'wght' var(--font-weight),
 		'slnt' var(--font-slant),
 		'CASL' var(--font-casual),
@@ -30,6 +29,7 @@ body {
   color: $color-text;
   margin: 0;
   transition: opacity 1s ease;
+  font-family: $font-sans;
 }
 
 ::placeholder {
@@ -68,14 +68,25 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   --font-cursive: 1;
   --font-casual: 1;
   margin: 1em 0 1rem;
   transition: all 309ms ease;
 }
 
-h1, h2, h3, h4, h5, h6, blockquote:before {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote:before {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -91,7 +102,7 @@ h1, h2, h3, h4, h5, h6, blockquote:before {
     $color-peri,
     $color-violet,
     $color-mauve,
-    $color-salmon,
+    $color-salmon
   );
   background-position: 0% 50%;
   background-size: 1200% auto;
@@ -131,7 +142,9 @@ h6 {
   --font-weight: 721;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   line-height: 1.618;
   --font-weight: 412;
   --font-casual: 0;
